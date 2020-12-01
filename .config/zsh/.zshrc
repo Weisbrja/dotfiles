@@ -67,19 +67,29 @@ bindkey "^e" edit-command-line
 
 # set aliases
 alias sudo="sudo "
-alias ls="ls --color=auto --group-directories-first -h"
-alias ll="ls -lF"
-alias l="ls -lFA"
+
+alias ls="exa --color=auto --group-directories-first"
+alias lt="ls -aT"
+alias ll="ls -l"
+alias l="ls -la"
+
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
+
+alias df="df -h"
+alias free="free -m"
+
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
+
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
 alias i="sudo make clean install; sudo make clean"
 alias c="vim config.def.h"
-alias VirtualBox="VirtualBox -style Adwaita-dark %U"
+
+#alias VirtualBox="VirtualBox -style Adwaita-dark %U"
 
 # enable colors
 autoload -Uz colors && colors

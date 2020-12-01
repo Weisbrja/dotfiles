@@ -89,13 +89,13 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias i="sudo make clean install; sudo make clean"
 alias c="vim config.def.h"
 
-alias upd="sudo reflector -a 12 -c Germany --threads 4 --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyyu --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm"
+alias upd="sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyyu --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm"
 
 # enable colors
 autoload -Uz colors && colors
 
 # set the prompt variables
-PS1="%B%{$fg[magenta]%}%n%{$fg[white]%}@%{$fg[yellow]%}%M %{$fg[cyan]%}%~ %(?.%{$fg[green]%}.%{$fg[red]%})$%{$reset_color%}%b "
+PS1="%B%{$fg[yellow]%}%n%{$fg[white]%}@%{$fg[magenta]%}%M %{$fg[cyan]%}%~ %(?.%{$fg[green]%}.%{$fg[red]%})$%{$reset_color%}%b "
 PS2=">>> "
 
 # load plugins

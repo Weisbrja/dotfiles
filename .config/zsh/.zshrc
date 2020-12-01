@@ -89,8 +89,6 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias i="sudo make clean install; sudo make clean"
 alias c="vim config.def.h"
 
-#alias VirtualBox="VirtualBox -style Adwaita-dark %U"
-
 # enable colors
 autoload -Uz colors && colors
 

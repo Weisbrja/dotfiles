@@ -1,20 +1,26 @@
 #!/bin/zsh
 
 # set the history settings
-setopt hist_reduce_blanks
-setopt hist_save_no_dups
-setopt share_history
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_DUPS
+setopt APPEND_HISTORY
 
-# set the completion settings
-setopt correct
-setopt auto_list
-setopt extended_glob
+# enable auto cd
+setopt AUTO_CD
+
+# disable case sensitivity
+unsetopt CASE_GLOB
+
+# set the completion settings and load the completion system
+setopt ALIASES
+setopt CORRECT
+setopt AUTO_LIST
 autoload -Uz compinit && compinit
-_comp_options+=(globdots)
+_comp_options+=( globdots )
 zstyle ":completion:*" menu select
 
-# set some other settings
-setopt interactive_comments
+# enable comments
+setopt INTERACTIVE_COMMENTS
 
 # enable the vim-mode
 bindkey -v
@@ -50,6 +56,11 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
+# enable editing the current command in vim with ctrl-e
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey "^e" edit-command-line
+
 # set the terminal title to the current working directory before running the next command
 function precmd {
 	print -Pn "\e]0;%~\a"
@@ -59,11 +70,6 @@ function precmd {
 function preexec {
 	print -Pn "\e]0;$1\a"
 }
-
-# enable editing the current command in vim with ctrl-e
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey "^e" edit-command-line
 
 # set aliases
 alias sudo="sudo "
@@ -91,12 +97,12 @@ alias c="vim config.def.h"
 
 alias upd="sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyyu --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm"
 
-# enable colors
+# load colors
 autoload -Uz colors && colors
 
 # set the prompt variables
-PS1="%B%{$fg[yellow]%}%n%{$fg[white]%}@%{$fg[magenta]%}%M %{$fg[cyan]%}%~ %(?.%{$fg[green]%}.%{$fg[red]%})$%{$reset_color%}%b "
-PS2=">>> "
+PS1="%B%F{yellow}%n%b%f@%F{magenta}%M %B%F{blue}%~ %B%(?.%F{green}.%F{red})$%b%f "
+PS2="> "
 
 # load plugins
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

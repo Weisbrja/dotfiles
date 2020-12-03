@@ -5,9 +5,6 @@ setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY
 
-# enable auto cd
-setopt AUTO_CD
-
 # disable case sensitivity
 unsetopt CASE_GLOB
 

@@ -54,7 +54,7 @@ unclutter &
 # start redshift
 redshift &
 
-# speed the refresh rate up
+# enable character repeatition with a delay of 300ms and a rate of 50
 xset r rate 300 50 &
 
 # start dwm

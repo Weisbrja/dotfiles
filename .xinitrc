@@ -37,7 +37,7 @@ then
 fi
 
 # start the compositor
-picom -CG -e 1.0 --no-fading-openclose &
+picom -e 1.0 --no-fading-openclose &
 
 # set the wallpaper
 nitrogen --restore &

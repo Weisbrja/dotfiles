@@ -98,7 +98,7 @@ alias upd="sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pac
 autoload -Uz colors && colors
 
 # set the prompt variables
-PS1="%B%F{yellow}%n%b%f@%F{magenta}%M %B%F{blue}%~ %B%(?.%F{green}.%F{red})$%b%f "
+PS1="%B%F{yellow}%n%b%f@%B%F{magenta}%M %F{blue}%~ %(?.%F{green}.%F{red})$%b%f "
 PS2="> "
 
 # load plugins

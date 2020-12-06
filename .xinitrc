@@ -40,7 +40,7 @@ fi
 picom -e 1.0 --no-fading-openclose &
 
 # set the wallpaper
-nitrogen --restore &
+xwallpaper --zoom $HOME/.config/wallpaper.jpg &
 
 # start the status monitor
 slstatus &

@@ -5,9 +5,6 @@ setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY
 
-# disable case sensitivity
-unsetopt CASE_GLOB
-
 # set the completion settings and load the completion system
 setopt ALIASES
 setopt CORRECT

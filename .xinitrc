@@ -37,7 +37,7 @@ then
 fi
 
 # start the compositor
-picom -e 1.0 --no-fading-openclose &
+picom &
 
 # set the wallpaper
 #hsetroot -solid "#000000"

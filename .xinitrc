@@ -40,7 +40,8 @@ fi
 picom -e 1.0 --no-fading-openclose &
 
 # set the wallpaper
-xwallpaper --zoom $HOME/.config/wallpaper.jpg &
+#hsetroot -solid "#000000"
+xwallpaper --zoom $HOME/.config/wallpaper.jpg
 
 # start the status monitor
 slstatus &

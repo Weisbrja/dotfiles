@@ -7,6 +7,6 @@ endif
 " load plugins
 call plug#begin("$HOME/.config/nvim/autoload/plugged")
 	Plug 'crusoexia/vim-monokai'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'ap/vim-css-color'
+	Plug 'lervag/vimtex'
 call plug#end()

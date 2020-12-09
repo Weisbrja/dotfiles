@@ -40,8 +40,8 @@ fi
 picom &
 
 # set the wallpaper
-#hsetroot -solid "#000000"
-xwallpaper --zoom $HOME/.config/wallpaper.jpg
+#xwallpaper --zoom $HOME/.config/wallpaper.jpg
+hsetroot -solid "#000000"
 
 # start the status monitor
 slstatus &

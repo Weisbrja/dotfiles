@@ -30,7 +30,7 @@ export HISTFILE="$ZDOTDIR/zsh_history"
 export HISTSIZE=5000
 export SAVEHIST=5000
 
-# enable color and mouse support in less
+# enable mouse support in less
 export LESS="-R --mouse"
 
 # set qt theme variable

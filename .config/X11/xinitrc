@@ -1,7 +1,7 @@
 #!/bin/sh
 
-userresources="$HOME/.Xresources"
-usermodmap="$HOME/.Xmodmap"
+userresources="${XDG_CONFIG_HOME:-$HOME/.config}/.Xresources"
+usermodmap="${XDG_CONFIG_HOME:-$HOME/.config}/.Xmodmap"
 sysresources="/etc/X11/xinit/.Xresources"
 sysmodmap="/etc/X11/xinit/.Xmodmap"
 
@@ -40,8 +40,8 @@ fi
 picom &
 
 # set the wallpaper
-#xwallpaper --zoom $HOME/.config/wallpaper.jpg
-hsetroot -solid "#000000"
+#xwallpaper --zoom $HOME/.config/wallpaper.jpg &
+hsetroot -solid "#000000" &
 
 # start the status monitor
 slstatus &

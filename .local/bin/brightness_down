@@ -1,2 +1,2 @@
 #!/bin/sh
-brightnessctl set 5%-
+brightnessctl set "5%-"

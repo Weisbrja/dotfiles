@@ -1,2 +1,2 @@
 #!/bin/sh
-pamixer --allow-boost -i 5
+pamixer --allow-boost -i 1

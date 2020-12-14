@@ -77,7 +77,7 @@ alias egrep="egrep --color=auto"
 
 alias vim="nvim"
 
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="git --git-dir=${XDG_CONFIG_HOME:-$HOME/.config}/dotfiles/ --work-tree=$HOME"
 
 alias i="sudo make clean install; sudo make clean"
 alias c="vim config.def.h"

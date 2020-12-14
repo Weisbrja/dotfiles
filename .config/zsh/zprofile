@@ -1,0 +1,47 @@
+#!/bin/zsh
+
+# add scripts to the path
+export PATH="$PATH:$(find "$HOME/.local/bin" | paste -sd ':')"
+
+# default programs
+export BROWSER="firefox"
+export EDITOR="nvim"
+export PAGER="less"
+export READER="zathura"
+export TERMINAL="st"
+
+# xdg variables
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+# zsh variables
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/zhistory"
+export HISTSIZE=5000
+export SAVEHIST=5000
+
+# variables for home directory clean up
+export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export LESSHISTFILE="-"
+
+# other variables
+export SUDO_ASKPASS="$HOME/.local/bin/dmenu_pass"
+export LESS="-R --mouse"
+export LESSOPEN="| highlight -O ansi %s 2>/dev/null"
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export AWT_TOOLKIT="MToolkit wmname LG3D"
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# execute startx at startup
+[ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && exec startx "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xinitrc"

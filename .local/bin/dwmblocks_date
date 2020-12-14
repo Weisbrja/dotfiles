@@ -1,3 +1,5 @@
 #!/bin/sh
+
 time=$(date '+%a %m/%d/%Y %R')
+
 printf "^d^(^c#8fc029^%s^d^)" "$time"

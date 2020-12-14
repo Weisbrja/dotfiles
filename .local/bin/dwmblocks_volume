@@ -1,8 +1,10 @@
 #!/bin/sh
+
 if [ $(pamixer --get-mute) = false ]
 then
 	volume="$(pamixer --get-volume)"
 else
 	volume='---'
 fi
+
 printf " ^d^(^c#9358fe^VOL %3s%%^d^)" "$volume"

@@ -1,33 +1,30 @@
 #!/bin/zsh
 
-# set the history settings
+# history settings
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY
 
-# set the completion settings and load the completion system
+# completion settings
 setopt ALIASES
 setopt CORRECT
-setopt AUTO_LIST
-autoload -Uz compinit && compinit
-_comp_options+=( globdots )
+autoload -Uz compinit
 zstyle ":completion:*" menu select
+zmodload zsh/complist
+compinit
+_comp_options+=( globdots )
 
-# enable comments
-setopt INTERACTIVE_COMMENTS
-
-# enable the vim-mode
+# vim mode
 bindkey -v
 export KEYTIMEOUT=1
 
-# enable vim-keys in the completion menu
-zmodload zsh/complist
+# vim keys in the completion menu
 bindkey -M menuselect "h" vi-backward-char
 bindkey -M menuselect "l" vi-forward-char
 bindkey -M menuselect "k" vi-up-line-or-history
 bindkey -M menuselect "j" vi-down-line-or-history
 
-# enable different cursor shapes for the vim-mode
+# different cursor shapes
 cursor_block="\e[1 q"
 cursor_beam="\e[5 q"
 function zle-keymap-select {
@@ -50,24 +47,25 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-# enable editing the current command in vim with ctrl-e
+# edit the current command in vim with ctrl-e
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey "^e" edit-command-line
 
-# set the terminal title to the current working directory before running the next command
 function precmd {
+	# set the terminal title to the current working directory
 	print -Pn "\e]0;%~\a"
 }
 
-# set the terminal title to the next command to run before executing it
 function preexec {
+	# set the terminal title to the current command
 	print -Pn "\e]0;$1\a"
+
+	# use beam cursor
+	echo -ne $cursor_beam
 }
 
-# set aliases
-alias sudo="sudo "
-
+# aliases
 alias ls="exa --color=auto --group-directories-first"
 alias lt="ls -aT"
 alias ll="ls -l"
@@ -77,12 +75,7 @@ alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
-alias df="df -h"
-alias free="free -m"
-
 alias vim="nvim"
-alias vi="nvim"
-alias v="nvim"
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
@@ -91,12 +84,12 @@ alias c="vim config.def.h"
 
 alias upd="sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm"
 
-# load colors
+# colors
 autoload -Uz colors && colors
 
-# set the prompt variables
+# prompt variables
 PS1="%B%F{yellow}%n%b%f@%B%F{magenta}%M %F{blue}%~ %(?.%F{green}.%F{red})$%b%f "
 PS2="> "
 
-# load plugins
+# plugins
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

@@ -2,9 +2,9 @@
 
 if setxkbmap -query | grep -Gq "layout:\s*de"
 then
-	layout='DE'
+	layout='De'
 else
-	layout='US'
+	layout='Us'
 fi
 
-printf " ^c#f1ebeb^LAY ^c#55bcce^%s " "$layout"
+printf " ^c#f1ebeb^Lay ^c#55bcce^%s " "$layout"

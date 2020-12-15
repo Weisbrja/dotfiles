@@ -1,5 +1,5 @@
 #!/bin/sh
 
-pamixer --allow-boost -i 1
+pamixer --allow-boost -i 5
 
 kill -36 $(pidof dwmblocks)

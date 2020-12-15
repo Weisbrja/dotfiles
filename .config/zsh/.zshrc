@@ -82,6 +82,9 @@ alias dotfiles="git --git-dir=${XDG_CONFIG_HOME:-$HOME/.config}/dotfiles/ --work
 alias i="sudo make clean install; sudo make clean"
 alias c="vim config.def.h"
 
+alias z="zathura"
+alias s="sxiv"
+
 alias upd="sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm"
 
 # colors

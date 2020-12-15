@@ -4,8 +4,8 @@
 picom &
 
 # set the wallpaper
-#xwallpaper --zoom $HOME/.config/wallpaper.jpg &
-hsetroot -solid "#000000" &
+#xwallpaper --zoom "$HOME/.config/wallpaper.jpg" &
+hsetroot -solid '#000000' &
 
 # start dwmblocks
 dwmblocks &

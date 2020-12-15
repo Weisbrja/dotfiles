@@ -7,4 +7,4 @@ else
 	volume='---'
 fi
 
-printf " ^d^(^c#9358fe^VOL %3s%%^d^)" "$volume"
+printf " ^c#f1ebeb^VOL ^c#9358fe^%3s%% " "$volume"

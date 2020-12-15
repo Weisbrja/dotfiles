@@ -1,7 +1,8 @@
 #!/bin/sh
+
 if setxkbmap -query | grep -Gq "layout:\s*de"
 then
 	setxkbmap us altgr-intl caps:swapescape
 else
-	setxkbmap de "" caps:swapescape
+	setxkbmap de '' caps:swapescape
 fi

@@ -2,4 +2,4 @@
 
 time=$(date '+%a %m/%d/%Y %R')
 
-printf " ^c#f1ebeb^DAT ^c#8fc029^%s " "$time"
+printf " ^c#f1ebeb^DAT ^c#d4c96e^%s " "$time"

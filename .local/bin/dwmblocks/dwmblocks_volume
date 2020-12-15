@@ -7,4 +7,11 @@ else
 	volume='---'
 fi
 
-printf " ^c#f1ebeb^VOL ^c#9358fe^%3s%% " "$volume"
+if amixer get Capture | grep -Fwq '[on]'
+then
+	microphone=' '
+else
+	microphone='M'
+fi
+
+printf " ^c#f1ebeb^VOL ^c#9358fe^%3s%% %s " "$volume" "$microphone"

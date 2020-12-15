@@ -1,2 +1,5 @@
 #!/bin/sh
+
 pamixer --allow-boost -d 1
+
+kill -36 $(pidof dwmblocks)

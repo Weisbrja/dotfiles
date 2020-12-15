@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# this is a replacement script for passmenu
+pass -c $(find $PASSWORD_STORE_DIR -type f -exec realpath --relative-to $PASSWORD_STORE_DIR {} \; | sed 's/.gpg$//;/\.gpg-id/d' | sort | dmenu -p 'Password:')

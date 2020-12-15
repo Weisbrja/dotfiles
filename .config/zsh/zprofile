@@ -29,7 +29,7 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export LESSHISTFILE="-"
 
 # other variables
-export SUDO_ASKPASS="$HOME/.local/bin/dmenu_pass"
+export SUDO_ASKPASS="$HOME/.local/bin/dmenu/dmenu_askpass"
 export LESS="-R --mouse"
 export LESSOPEN="| highlight -O ansi %s 2>/dev/null"
 export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"

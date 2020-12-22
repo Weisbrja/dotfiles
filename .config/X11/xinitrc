@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# start the session
+lxsession
+
 # start the compositor
 picom &
 

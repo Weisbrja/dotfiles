@@ -2,7 +2,6 @@
 
 # history settings
 setopt HIST_REDUCE_BLANKS
-setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY
 
 # completion settings
@@ -44,7 +43,7 @@ zle -N zle-keymap-select
 zle-line-init() {
 	echo -ne "$cursor_beam"
 }
-zle -N 'zle-line-init'
+zle -N zle-line-init
 
 # edit the current command in vim with ctrl-e
 autoload -Uz edit-command-line

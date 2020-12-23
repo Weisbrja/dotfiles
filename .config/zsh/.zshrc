@@ -5,13 +5,14 @@ setopt HIST_REDUCE_BLANKS
 setopt APPEND_HISTORY
 
 # completion settings
+setopt EXTENDEDGLOB
+setopt GLOB_DOTS
 setopt ALIASES
 setopt CORRECT
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=( globdots )
 
 # vim mode
 bindkey -v
@@ -75,8 +76,6 @@ alias egrep='egrep --color=auto'
 
 alias vim='nvim'
 
-alias fzf='fzf --layout=reverse'
-
 alias dotfiles="git --git-dir=${XDG_CONFIG_HOME:-$HOME/.config}/dotfiles/ --work-tree=$HOME"
 
 alias i='sudo make clean install; sudo make clean'
@@ -84,7 +83,6 @@ alias c='vim config.def.h'
 
 alias pdf='zathura'
 alias img='sxiv'
-alias fin='vim $(fzf)'
 
 alias upd='sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm'
 

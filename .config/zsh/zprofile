@@ -30,7 +30,8 @@ export LESSHISTFILE='-'
 
 # other variables
 export SUDO_ASKPASS="$HOME/.local/bin/dmenu/dmenu_askpass"
-export LESS='-R --mouse'
+
+export LESS='-r --mouse +f'
 export LESSOPEN='| highlight -O ansi %s 2>/dev/null'
 export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
 export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
@@ -39,8 +40,15 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
-export FZF_DEFAULT_COMMAND="find . -type f -not  -path '*/\.git/*'"
+
+export FZF_COMPLETION_TRIGGER='**'
+export FZF_DEFAULT_COMMAND="fd -HLE '.git' -E 'node_modules'"
+export FZF_DIRECTORY_COMMAND="$FZF_DEFAULT_COMMAND -t d"
+export FZF_FILES_COMMAND="$FZF_DEFAULT_COMMAND -t f"
+export FZF_DEFAULT_OPTS='--layout=reverse'
+
 export QT_QPA_PLATFORMTHEME='qt5ct'
+
 export AWT_TOOLKIT='MToolkit wmname LG3D'
 export _JAVA_AWT_WM_NONREPARENTING=1
 

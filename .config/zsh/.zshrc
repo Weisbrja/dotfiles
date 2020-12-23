@@ -8,7 +8,7 @@ setopt APPEND_HISTORY
 setopt ALIASES
 setopt CORRECT
 autoload -Uz compinit
-zstyle ":completion:*" menu select
+zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=( globdots )
@@ -48,7 +48,7 @@ zle -N zle-line-init
 # edit the current command in vim with ctrl-e
 autoload -Uz edit-command-line
 zle -N edit-command-line
-bindkey "^e" edit-command-line
+bindkey '^e' edit-command-line
 
 function precmd {
 	# set the terminal title to the current working directory
@@ -64,27 +64,29 @@ function preexec {
 }
 
 # aliases
-alias ls="exa --color=auto --group-directories-first"
-alias lt="ls -aT"
-alias ll="ls -l"
-alias l="ls -la"
+alias ls='exa --color=auto --group-directories-first'
+alias lt='ls -aT'
+alias ll='ls -l'
+alias l='ls -la'
 
-alias grep="grep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias egrep="egrep --color=auto"
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
-alias vim="nvim"
+alias vim='nvim'
+
+alias fzf='fzf --layout=reverse'
 
 alias dotfiles="git --git-dir=${XDG_CONFIG_HOME:-$HOME/.config}/dotfiles/ --work-tree=$HOME"
 
-alias i="sudo make clean install; sudo make clean"
-alias c="vim config.def.h"
+alias i='sudo make clean install; sudo make clean'
+alias c='vim config.def.h'
 
-alias z="zathura"
-alias s="sxiv"
-alias d="killall -q dwmblocks; setsid dwmblocks &"
+alias pdf='zathura'
+alias img='sxiv'
+alias fin='vim $(fzf)'
 
-alias upd="sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm"
+alias upd='sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm'
 
 # colors
 autoload -Uz colors && colors

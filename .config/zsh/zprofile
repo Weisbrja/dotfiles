@@ -42,7 +42,7 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 
 export FZF_COMPLETION_TRIGGER='**'
-export FZF_DEFAULT_COMMAND="fd -HLE '.git' -E 'node_modules'"
+export FZF_DEFAULT_COMMAND="fd -HLE '.git' -E '*cache*'"
 export FZF_DIRECTORY_COMMAND="$FZF_DEFAULT_COMMAND -t d"
 export FZF_FILES_COMMAND="$FZF_DEFAULT_COMMAND -t f"
 export FZF_DEFAULT_OPTS='--layout=reverse'

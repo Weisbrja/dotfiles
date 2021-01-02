@@ -2,7 +2,7 @@
 
 # history settings
 setopt HIST_REDUCE_BLANKS
-setopt APPEND_HISTORY
+setopt SHARE_HISTORY
 
 # completion settings
 setopt EXTENDEDGLOB
@@ -28,21 +28,15 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 cursor_block="\e[1 q"
 cursor_beam="\e[5 q"
 function zle-keymap-select {
-	if [ "${KEYMAP}" = 'vicmd' ] ||
-		[ "$1" = 'block' ]
-	then
-		echo -ne "$cursor_block"
-	elif [ "${KEYMAP}" = 'main' ] ||
-		[ "${KEYMAP}" = 'viins' ] ||
-		[ "$1" = 'beam' ]
-	then
-		echo -ne "$cursor_beam"
-	fi
+	case $KEYMAP in
+		vicmd) echo -ne $cursor_block;;
+		viins|main) echo -ne $cursor_beam;;
+	esac
 }
 zle -N zle-keymap-select
 
 zle-line-init() {
-	echo -ne "$cursor_beam"
+	echo -ne $cursor_beam
 }
 zle -N zle-line-init
 
@@ -60,8 +54,8 @@ function preexec {
 	# set the terminal title to the current command
 	print -Pn "\e]0;$1\a"
 
-	# use beam cursor
-	echo -ne "$cursor_beam"
+	# use the beam cursor
+	echo -ne $cursor_beam
 }
 
 # aliases

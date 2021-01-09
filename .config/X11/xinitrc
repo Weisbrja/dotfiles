@@ -11,7 +11,7 @@ picom &
 hsetroot -solid '#000000' &
 
 # start redshift
-redshift -t 4500:3500 -l 49.46:8.48 &
+redshift -O 3500
 
 # start dwmblocks
 dwmblocks &

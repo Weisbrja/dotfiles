@@ -8,7 +8,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'crusoexia/vim-monokai'
 	Plug 'dense-analysis/ale'
-	Plug 'Shougo/deoplete.nvim'
+	Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'ap/vim-css-color'
 	Plug 'lervag/vimtex'

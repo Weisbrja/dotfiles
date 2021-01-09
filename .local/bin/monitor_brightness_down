@@ -1,4 +1,3 @@
 #!/bin/sh
 killall redshift
-redshift -x
-redshift -b 0.7:0.7 -t 4500:3500 -l 49.46:8.48
+redshift -b 0.7:0.7 -O 3500 -P

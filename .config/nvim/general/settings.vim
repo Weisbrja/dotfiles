@@ -44,7 +44,6 @@ set nowritebackup
 set updatetime=300
 set timeoutlen=500
 
-set iskeyword+=-
 set formatoptions-=cro
 
 " global copy and paste buffer

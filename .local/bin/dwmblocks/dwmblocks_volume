@@ -1,13 +1,8 @@
 #!/bin/sh
 
-volume="$(pamixer --get-volume)"
+volume=$(pamixer --get-volume)
 
-if [ $(pamixer --get-mute) = false ]
-then
-	speakers='A'
-else
-	speakers='M'
-fi
+speakers=$(pamixer --get-mute | sed 's/false/A/;s/true/M/')
 
 if amixer get Capture | grep -Fwq '[on]'
 then
@@ -16,4 +11,4 @@ else
 	microphone='M'
 fi
 
-printf " ^c#f1ebeb^Vol ^c#9358fe^%3s%% %s %s " "$volume" "$speakers" "$microphone"
+printf ' ^c#f1ebeb^Vol ^c#9358fe^%3s%% %s %s ' "$volume" "$speakers" "$microphone"

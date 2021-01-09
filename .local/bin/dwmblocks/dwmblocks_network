@@ -1,0 +1,6 @@
+#!/bin/sh
+
+connection=$(nmcli -a | grep 'Wired connection' | awk 'NR == 1 {print $1; exit}')
+[ -z "$connection" ] && connection=$(nmcli -t -f active,ssid dev wifi | grep -m 1 '^yes' | cut -c 5-)
+
+printf ' ^c#f1ebeb^Net ^c#8fc029^%s ' "$connection"

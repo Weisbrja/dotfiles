@@ -5,4 +5,4 @@ battery='/sys/class/power_supply/BAT0'
 capacity=$(cat "$battery/capacity")
 status=$(sed 's/Discharging/-/;s/Not charging/N/;s/Charging/+/;s/Unknown/?/;s/Full/F/' "$battery/status")
 
-printf ' ^c#f1ebeb^Bat ^c#56b7a5^%3s%% %s ' "$capacity" "$status"
+printf ' ^c#f1ebeb^Bat ^c#9358fe^%3s%% %s ' "$capacity" "$status"

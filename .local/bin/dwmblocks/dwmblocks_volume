@@ -11,4 +11,4 @@ else
 	microphone='M'
 fi
 
-printf ' ^c#f1ebeb^Vol ^c#9358fe^%3s%% %s %s ' "$volume" "$speakers" "$microphone"
+printf ' ^c#f1ebeb^Vol ^c#dc2566^%3s%% %s %s ' "$volume" "$speakers" "$microphone"

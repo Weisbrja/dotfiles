@@ -12,6 +12,7 @@ set pumheight=10
 set hidden
 
 " spell checking
+set spell
 set spelllang=en,de
 
 " correct splits

@@ -11,6 +11,10 @@ set mouse=a
 set pumheight=10
 set hidden
 
+" spell checking
+set spell
+set spelllang=en,de
+
 " correct splits
 set splitbelow
 set splitright
@@ -27,7 +31,7 @@ set termguicolors
 let g:monokai_term_italic = 1
 let g:monokai_gui_italic = 1
 
-" intendation
+" indentation
 set tabstop=4
 set shiftwidth=4
 set smarttab
@@ -43,8 +47,6 @@ set nobackup
 set nowritebackup
 set updatetime=300
 set timeoutlen=500
-
-set formatoptions-=cro
 
 " global copy and paste buffer
 set clipboard=unnamedplus

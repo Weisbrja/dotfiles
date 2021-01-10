@@ -11,7 +11,7 @@ then
 fi
 
 # start the session
-lxsession -a &
+#lxsession -a &
 
 # start the compositor
 picom &

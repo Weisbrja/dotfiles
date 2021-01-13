@@ -1,7 +1,5 @@
 #!/bin/sh
 
-chosen="$(fd -HLE '.git' -E '*cache*' -t f | dmenu -i -p 'Edit')"
-if [ "$chosen" != '' ]
-then
-	$TERMINAL -e "$EDITOR" "$chosen"
-fi
+chosen="$(fd -HLE '.git' -E '*cache*' -t f | dmenu -i -p Edit)"
+echo "$chosen"
+[ -z "$chosen" ] || "$TERMINAL" -e "$EDITOR" "$chosen"

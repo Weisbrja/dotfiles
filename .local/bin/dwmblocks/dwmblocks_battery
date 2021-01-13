@@ -1,8 +1,18 @@
 #!/bin/sh
 
-battery='/sys/class/power_supply/BAT0'
+printf ' ^c#f1ebeb^Bat '
 
-capacity=$(cat "$battery/capacity")
-status=$(sed 's/Discharging/-/;s/Not charging/N/;s/Charging/+/;s/Unknown/?/;s/Full/F/' "$battery/status")
+for battery in '/sys/class/power_supply/BAT'?*
+do
+	capacity=$(cat "$battery/capacity")
+	status=$(cat "$battery/status")
+	case "$status" in
+		'Full') status='F' ;;
+		'Discharging') status='-' ;;
+		'Charging') status='+' ;;
+		'Not charging') status='0' ;;
+		"Unknown") status='?' ;;
+	esac
 
-printf ' ^c#f1ebeb^Bat ^c#9358fe^%3s%% %s ' "$capacity" "$status"
+	printf '^c#9358fe^%3s%% %s ' "$capacity" "$status"
+done

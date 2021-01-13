@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if setxkbmap -query | grep -Gq "layout:\s*de"
+if setxkbmap -query | grep -Gq 'layout:\s*de'
 then
 	layout='De'
 else

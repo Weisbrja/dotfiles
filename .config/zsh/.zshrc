@@ -85,7 +85,7 @@ autoload -Uz colors && colors
 
 # prompt variables
 PS1="%B%F{yellow}%n%b%f@%B%F{magenta}%M %F{blue}%~ %(?.%F{green}.%F{red})$%b%f "
-PS2="> "
+PS2=""
 
 # plugins
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

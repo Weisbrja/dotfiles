@@ -4,15 +4,14 @@
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 
+# aliases
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases"
+
 # completion settings
-setopt EXTENDEDGLOB
-setopt GLOB_DOTS
-setopt ALIASES
-setopt CORRECT
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zcompletions" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zcompletions"
+
+# shortcuts
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zshortcuts" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zshortcuts"
 
 # vim mode
 bindkey -v
@@ -40,11 +39,6 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-# edit the current command in vim with ctrl-e
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey '^e' edit-command-line
-
 function precmd {
 	# set the terminal title to the current working directory
 	print -Pn "\e]0;%~\a"
@@ -58,32 +52,8 @@ function preexec {
 	echo -ne $cursor_beam
 }
 
-# aliases
-alias ls='exa --color=auto --group-directories-first'
-alias lt='ls -aT'
-alias ll='ls -l'
-alias l='ls -la'
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias vim='nvim'
-
-alias dotfiles="git --git-dir=${XDG_CONFIG_HOME:-$HOME/.config}/dotfiles/ --work-tree=$HOME"
-
-alias i='sudo make clean install; sudo make clean'
-alias c='vim config.def.h'
-
-alias pdf='zathura'
-alias img='sxiv'
-
-alias upd='sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm'
-
-# colors
-autoload -Uz colors && colors
-
 # prompt variables
+autoload -Uz colors && colors
 PS1="%B%F{yellow}%n%b%f@%B%F{magenta}%M %F{blue}%~ %(?.%F{green}.%F{red})$%b%f "
 PS2=""
 

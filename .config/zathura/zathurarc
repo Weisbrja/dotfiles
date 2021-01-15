@@ -1,0 +1,47 @@
+# font
+set font 'Hermit 8'
+
+# colors
+set default-fg '#f1ebeb'
+set default-bg '#272822'
+
+set statusbar-fg '#f1ebeb'
+set statusbar-bg '#48483e'
+
+set inputbar-fg '#f1ebeb'
+set inputbar-bg '#48483e'
+
+set tabbar-fg '#acada1'
+set tabbar-bg '#272822'
+set tabbar-focus-fg '#f1ebeb'
+set tabbar-focus-bg '#48483e'
+
+set index-fg '#acada1'
+set index-bg '#272822'
+set index-active-fg '#f1ebeb'
+set index-active-bg '#48483e'
+
+set completion-fg '#acada1'
+set completion-bg '#272822'
+set completion-highlight-fg '#f1ebeb'
+set completion-highlight-bg '#48483e'
+
+# recoloring settings
+set recolor true
+set recolor-lightcolor '#272822'
+set recolor-darkcolor '#f1ebeb'
+set recolor-keephue true
+set recolor-reverse-video true
+
+# other settings
+set render-loading false
+set inremenetal-search
+set selection-clipboard clipboard
+
+# mappings
+map H zoom out
+map L zoom in
+unmap -
+unmap +
+map i recolor
+map p print

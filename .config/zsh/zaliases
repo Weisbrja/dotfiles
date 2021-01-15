@@ -20,4 +20,4 @@ alias c='vim config.def.h'
 alias pdf='zathura'
 alias img='sxiv'
 
-alias upd='sudo reflector -a 12 -c Germany --sort rate --verbose --save /etc/pacman.d/mirrorlist; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm'
+alias upd='sudo reflector --country Germany --latest 100 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm'

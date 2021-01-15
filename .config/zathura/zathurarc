@@ -55,8 +55,8 @@ set incremental-search
 set selection-clipboard clipboard
 
 # mappings
-map H zoom in
-map L zoom out
+map H zoom out
+map L zoom in
 unmap -
 unmap +
 map i recolor

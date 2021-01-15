@@ -1,16 +1,16 @@
 #!/bin/zsh
 
 # aliases
+alias vim='nvim'
+
 alias ls='exa --color=auto --group-directories-first'
-alias lt='ls -aT'
 alias ll='ls -l'
 alias l='ls -la'
+alias lt='ls -aT'
 
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-alias vim='nvim'
+alias fgrep='fgrep --color=auto'
 
 alias dotfiles="git --git-dir=${XDG_CONFIG_HOME:-$HOME/.config}/dotfiles/ --work-tree=$HOME"
 

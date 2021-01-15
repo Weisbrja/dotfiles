@@ -32,3 +32,6 @@ cmd open ${{
 		*) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done ;;
 	esac
 }}
+
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+map <c-n> push :mkdir<space>

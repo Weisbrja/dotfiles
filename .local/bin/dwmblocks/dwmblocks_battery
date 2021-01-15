@@ -14,5 +14,5 @@ do
 		"Unknown") status='?' ;;
 	esac
 
-	printf '^c#9358fe^%3s%% %s ' "$capacity" "$status"
+	printf '^c#56b7a5^%3s%% %s ' "$capacity" "$status"
 done

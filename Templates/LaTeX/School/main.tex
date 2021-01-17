@@ -32,6 +32,11 @@
 \newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
 \renewcommand{\url}[1]{\hrefurl{#1}{#1}}
 
+% numbered lists
+\usepackage{enumitem}
+\newlist{numlist}{enumerate}{1}
+\setlist[numlist,1]{label=\textbf{\arabic*)}}
+
 % title
 \newcommand\Title{TITEL}
 

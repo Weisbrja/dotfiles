@@ -21,6 +21,7 @@ set splitright
 
 " better search
 set ignorecase
+set smartcase
 set incsearch
 
 " theme

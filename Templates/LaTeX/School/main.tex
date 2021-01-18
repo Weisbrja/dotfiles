@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headsep=1cm]{geometry}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,headsep=0.75cm]{geometry}
 
 % common packages
 \usepackage{amsmath,amssymb,amsthm}
@@ -23,11 +23,6 @@
 % definition environment
 \newtheorem{definition}{Definition}[section]
 
-% numbered lists
-\usepackage{enumitem}
-\newlist{numlist}{enumerate}{1}
-\setlist[numlist,1]{label=\textbf{\arabic*)}}
-
 % link package
 \usepackage[colorlinks,allcolors=blue]{hyperref}
 \usepackage{caption}
@@ -41,7 +36,7 @@
 \titlespacing*{\subsubsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
 
 % title
-\newcommand\Title{TITEL}
+\newcommand\Title{Titel}
 
 % header
 \usepackage{fancyhdr,lastpage}
@@ -61,6 +56,6 @@
 \maketitle
 \thispagestyle{empty}
 
-INHALT
+Inhalt
 
 \end{document}

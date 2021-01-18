@@ -28,17 +28,17 @@
 \newlist{numlist}{enumerate}{1}
 \setlist[numlist,1]{label=\textbf{\arabic*)}}
 
-% section settings
-\usepackage{titlesec}
-\titlespacing*{\section}{0cm}{0.7\baselineskip}{0.7\baselineskip}
-\titlespacing*{\subsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
-\titlespacing*{\subsubsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
-
 % link package
 \usepackage[colorlinks,allcolors=blue]{hyperref}
 \usepackage{caption}
 \newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
 \renewcommand{\url}[1]{\hrefurl{#1}{#1}}
+
+% section settings
+\usepackage{titlesec}
+\titlespacing*{\section}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+\titlespacing*{\subsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+\titlespacing*{\subsubsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
 
 % title
 \newcommand\Title{TITEL}
@@ -47,13 +47,13 @@
 \usepackage{fancyhdr,lastpage}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\textbf{\Title{}}}
+\fancyhead[L]{\textbf{\Title}}
 \fancyhead[R]{\textbf{Seite \thepage{} von~\pageref{LastPage}}}
 \setlength\footskip{0pt}
 \renewcommand\headrulewidth{0.5pt}
 
 % title settings
-\title{\textbf{\Title{}}}
+\title{\textbf{\Title}}
 \author{Jannis Weisbrodt}
 
 \begin{document}

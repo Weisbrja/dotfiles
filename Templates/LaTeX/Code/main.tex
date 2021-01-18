@@ -20,6 +20,26 @@
 \usepackage{array}
 \renewcommand\arraystretch{1.5}
 
+% section settings
+\usepackage{titlesec}
+\titlespacing*{\section}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+\titlespacing*{\subsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+\titlespacing*{\subsubsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+
+% definition environment
+\newtheorem{definition}{Definition}[section]
+
+% numbered lists
+\usepackage{enumitem}
+\newlist{numlist}{enumerate}{1}
+\setlist[numlist,1]{label=\textbf{\arabic*)}}
+
+% link package
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{caption}
+\newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
+\renewcommand{\url}[1]{\hrefurl{#1}{#1}}
+
 % code packages
 \usepackage{listings,xcolor}
 \definecolor{code_black}{HTML}{272822}
@@ -49,18 +69,6 @@
 	showtabs=false,
 	tabsize=4
 }
-
-% section settings
-\usepackage{titlesec}
-\titlespacing*{\section}{0cm}{0.7\baselineskip}{0.7\baselineskip}
-\titlespacing*{\subsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
-\titlespacing*{\subsubsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
-
-% link package
-\usepackage[colorlinks,allcolors=blue]{hyperref}
-\usepackage{caption}
-\newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
-\renewcommand{\url}[1]{\hrefurl{#1}{#1}}
 
 % title
 \newcommand\Title{TITEL}

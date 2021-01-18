@@ -20,6 +20,14 @@
 \usepackage{array}
 \renewcommand\arraystretch{1.5}
 
+% definition environment
+\newtheorem{definition}{Definition}[section]
+
+% numbered lists
+\usepackage{enumitem}
+\newlist{numlist}{enumerate}{1}
+\setlist[numlist,1]{label=\textbf{\arabic*)}}
+
 % section settings
 \usepackage{titlesec}
 \titlespacing*{\section}{0cm}{0.7\baselineskip}{0.7\baselineskip}
@@ -31,11 +39,6 @@
 \usepackage{caption}
 \newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
 \renewcommand{\url}[1]{\hrefurl{#1}{#1}}
-
-% numbered lists
-\usepackage{enumitem}
-\newlist{numlist}{enumerate}{1}
-\setlist[numlist,1]{label=\textbf{\arabic*)}}
 
 % title
 \newcommand\Title{TITEL}

@@ -15,7 +15,7 @@ filetype plugin on
 let g:deoplete#enable_at_startup = 1
 
 " vimtex
-let g:tex_flavor = 'xelatex'
+let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 autocmd Filetype tex setl updatetime=1
 

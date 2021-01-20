@@ -1,27 +1,27 @@
-" auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-	\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall
-endif
+filetype off
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin('~/.config/nvim/bundle')
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'dense-analysis/ale'
+Plugin 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ap/vim-css-color'
+Plugin 'lervag/vimtex'
+call vundle#end()
+filetype plugin on
 
-call plug#begin('~/.config/nvim/autoload/plugged')
-	Plug 'crusoexia/vim-monokai'
-	Plug 'dense-analysis/ale'
-	Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'ap/vim-css-color'
-	Plug 'lervag/vimtex'
-call plug#end()
-
+" deoplete
 let g:deoplete#enable_at_startup = 1
 
-" vimtex settings
-let g:tex_flavor = 'latex'
+" vimtex
+let g:tex_flavor = 'xelatex'
 let g:vimtex_view_method = 'zathura'
 
 " theme
+syntax enable
 colorscheme monokai
+set termguicolors
 set background=dark
 let g:monokai_term_italic = 1
 let g:monokai_gui_italic = 1

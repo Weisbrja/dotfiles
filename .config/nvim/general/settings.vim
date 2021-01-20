@@ -3,7 +3,6 @@ set fileencoding=utf-8
 
 " line numbers
 set number
-set relativenumber
 
 " mouse support
 set mouse=a
@@ -24,16 +23,15 @@ set ignorecase
 set smartcase
 set incsearch
 
-" theme
-syntax enable
-set termguicolors
-
 " indentation
 set tabstop=4
 set shiftwidth=4
 set smarttab
 set smartindent
-set autoindent
+"set autoindent
+
+" disable automatic continuation of comments
+autocmd FileType * set formatoptions-=cro
 
 set conceallevel=0
 

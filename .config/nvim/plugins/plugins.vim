@@ -5,6 +5,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'dense-analysis/ale'
 Plugin 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plugin 'justinmk/vim-sneak'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ap/vim-css-color'
 Plugin 'lervag/vimtex'
@@ -13,6 +14,9 @@ filetype plugin on
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" sneak
+let g:sneak#label = 1
 
 " vimtex
 let g:tex_flavor = 'latex'

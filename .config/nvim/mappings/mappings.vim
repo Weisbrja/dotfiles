@@ -11,7 +11,7 @@ nnoremap <C-k> :resize -2<CR>
 nnoremap <C-l> :vertical resize +2<CR>
 
 " tab completion
-inoremap <Expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " better tabbing
 vnoremap < <gv

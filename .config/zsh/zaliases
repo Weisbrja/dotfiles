@@ -21,3 +21,6 @@ alias pdf='zathura'
 alias img='sxiv'
 
 alias upd='sudo reflector --country Germany --latest 100 --sort rate --save /etc/pacman.d/mirrorlist --verbose; yay -Syyu --devel --noconfirm; yay -Yc --noconfirm; yay -Sc --noconfirm'
+
+alias newmain="cp $HOME/Templates/LaTeX/main.tex ."
+alias newshort="cp $HOME/Templates/LaTeX/short.tex ."

@@ -41,7 +41,9 @@ set timeoutlen=500
 " global copy and paste buffer
 set clipboard=unnamedplus
 
-let g:mapleader = "\<Space>"
+" leader key
+nnoremap <Space> <Nop>
+let mapleader="\<Space>"
 
 " force write
 cmap w!! w !sudo tee %

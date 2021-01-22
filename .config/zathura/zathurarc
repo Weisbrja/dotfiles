@@ -42,7 +42,10 @@ set recolor-keephue true
 set recolor-reverse-video true
 
 # other settings
-set page-padding 4
+set first-page-column 1:1
+
+#set page-padding 4
+
 set n-completion-items 20
 
 set show-hidden true

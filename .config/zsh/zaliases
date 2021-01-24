@@ -6,6 +6,7 @@ alias vim='nvim'
 alias ls='exa --color=auto --group-directories-first'
 alias ll='ls -l'
 alias l='ls -la'
+alias llt='ls -T'
 alias lt='ls -aT'
 
 alias grep='grep --color=auto'

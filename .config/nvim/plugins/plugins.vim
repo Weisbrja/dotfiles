@@ -17,11 +17,22 @@ let g:deoplete#enable_at_startup = 1
 
 " sneak
 let g:sneak#label = 1
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
+xmap t <Plug>Sneak_t
+xmap T <Plug>Sneak_T
+omap t <Plug>Sneak_t
+omap T <Plug>Sneak_T
 
 " vimtex
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
-autocmd Filetype tex setl updatetime=1
 
 " theme
 syntax enable

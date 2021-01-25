@@ -18,14 +18,15 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # zsh variables
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/zhistory"
-export HISTSIZE=5000
-export SAVEHIST=5000
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 # variables for home directory clean up
 export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export _Z_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/z/z"
 export LESSHISTFILE='-'
 
 # other variables
@@ -44,4 +45,4 @@ export AWT_TOOLKIT='MToolkit wmname LG3D'
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # execute startx at startup
-[ -z ${DISPLAY} ] && [ ${XDG_VTNR} -eq 1 ] && exec startx "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xinitrc"
+[ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && exec startx "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xinitrc"

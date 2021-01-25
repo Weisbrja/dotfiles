@@ -24,24 +24,24 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # different cursor shapes
-cursor_block="\e[1 q"
-cursor_beam="\e[5 q"
+cursor_block='\e[1 q'
+cursor_beam='\e[5 q'
 function zle-keymap-select {
-	case $KEYMAP in
-		vicmd) echo -ne $cursor_block;;
-		viins|main) echo -ne $cursor_beam;;
+	case "$KEYMAP" in
+		vicmd) echo -ne "$cursor_block" ;;
+		viins|main) echo -ne "$cursor_beam" ;;
 	esac
 }
 zle -N zle-keymap-select
 
 zle-line-init() {
-	echo -ne $cursor_beam
+	echo -ne "$cursor_beam"
 }
 zle -N zle-line-init
 
 function precmd {
 	# set the terminal title to the current working directory
-	print -Pn "\e]0;%~\a"
+	print -Pn '\e]0;%~\a'
 }
 
 function preexec {
@@ -49,13 +49,16 @@ function preexec {
 	print -Pn "\e]0;$1\a"
 
 	# use the beam cursor
-	echo -ne $cursor_beam
+	echo -ne "$cursor_beam"
 }
 
 # prompt variables
 autoload -Uz colors && colors
-PS1="%B%F{yellow}%n%b%f@%B%F{magenta}%M %F{blue}%~ %(?.%F{green}.%F{red})$%b%f "
-PS2=""
+PS1='%B%F{yellow}%n%b%f@%B%F{magenta}%M %F{blue}%~ %(?.%F{green}.%F{red})$%b%f '
+PS2=''
 
 # plugins
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+source '/usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh' 2>/dev/null
+
+# start z
+[ -r '/usr/share/z/z.sh' ] && source '/usr/share/z/z.sh'

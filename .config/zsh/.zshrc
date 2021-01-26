@@ -59,6 +59,3 @@ PS2=''
 
 # plugins
 source '/usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh' 2>/dev/null
-
-# start z
-[ -r '/usr/share/z/z.sh' ] && source '/usr/share/z/z.sh'

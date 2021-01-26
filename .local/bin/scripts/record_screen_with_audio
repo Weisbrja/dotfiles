@@ -1,6 +1,8 @@
 #!/bin/sh
 
-microphone=$(pactl list sources short | awk '{ print $2 }' | grep 'monitor')
 screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }')
 
-ffmpeg -f alsa -i default -f x11grab -r 30 -s $screen_resolution -i :0.0 -vcodec libx264 output.mp4
+ffmpeg -loglevel error \
+	-f alsa -i default \
+	-f x11grab -r 30 -s "$screen_resolution" -i :0.0 -vcodec libx264 \
+	output.mp4

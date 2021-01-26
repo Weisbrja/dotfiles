@@ -21,7 +21,7 @@ alias c='vim config.def.h'
 alias pdf='zathura'
 alias img='sxiv'
 
-alias upd='paru -Syyu --devel --noconfirm; paru -Yc --noconfirm; paru -Sc --noconfirm'
+alias upd='paru -Syyu --devel --noconfirm; paru -Rns $(paru -Qqtd) --noconfirm; paru -Sc --noconfirm'
 alias updm='sudo reflector --country Germany --latest 100 --sort rate --save /etc/pacman.d/mirrorlist --verbose; upd'
 
 alias newmain="cp $HOME/Templates/LaTeX/main.tex ."

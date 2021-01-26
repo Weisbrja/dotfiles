@@ -1,0 +1,5 @@
+#!/bin/sh
+
+screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }')
+
+ffmpeg -f x11grab -r 30 -s $screen_resolution -i :0.0 -vcodec libx264 output.mp4

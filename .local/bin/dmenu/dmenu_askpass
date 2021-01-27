@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # this script is used as a password prompt
-dmenu -P -l 0 -p "Password" <&- && printf %s
+dmenu -P -l 0 -p 'Password' <&- && printf %s

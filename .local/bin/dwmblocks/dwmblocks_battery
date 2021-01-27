@@ -11,7 +11,7 @@ do
 		'Discharging') status='-' ;;
 		'Charging') status='+' ;;
 		'Not charging') status='0' ;;
-		"Unknown") status='?' ;;
+		'Unknown') status='?' ;;
 	esac
 
 	printf '^c#56b7a5^%3s%% %s ' "$capacity" "$status"

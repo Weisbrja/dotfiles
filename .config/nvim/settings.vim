@@ -1,6 +1,3 @@
-set encoding=utf-8
-set fileencoding=utf-8
-
 " line numbers
 set number
 
@@ -8,6 +5,7 @@ set number
 set mouse=a
 
 set pumheight=10
+
 set hidden
 
 " spell checking
@@ -28,7 +26,6 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set smartindent
-"set autoindent
 
 " disable automatic continuation of comments
 autocmd FileType * set formatoptions-=cro

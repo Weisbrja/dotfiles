@@ -5,13 +5,13 @@ setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
 
 # aliases
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases"
+[[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases"
 
 # completion settings
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zcompletions" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zcompletions"
+[[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zcompletions ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zcompletions"
 
 # shortcuts
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zshortcuts" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zshortcuts"
+[[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zshortcuts ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zshortcuts"
 
 # vim mode
 bindkey -v

@@ -5,6 +5,11 @@ printf ' ^c#f1ebeb^Bat '
 for battery in '/sys/class/power_supply/BAT'?*
 do
 	capacity=$(cat "$battery/capacity")
+	case "$capacity" in
+		10) dunstify -u critical -h string:x-dunst-stack-tag:battery Battery 10% ;;
+		5) dunstify -u critical -h string:x-dunst-stack-tag:battery Battery 5% ;;
+	esac
+
 	status=$(cat "$battery/status")
 	case "$status" in
 		'Full') status='F' ;;

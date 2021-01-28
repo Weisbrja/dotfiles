@@ -26,6 +26,9 @@ redshift -O 3500
 # start dwmblocks
 dwmblocks &
 
+# start dunst for notifications
+dunst &
+
 # bluetooth applet
 blueman-applet &
 

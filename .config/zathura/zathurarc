@@ -44,7 +44,7 @@ set recolor-reverse-video true
 # other settings
 set first-page-column 1:1
 
-#set page-padding 4
+set page-padding 0
 
 set n-completion-items 20
 

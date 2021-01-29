@@ -5,15 +5,19 @@ printf ' ^c#f1ebeb^Bat '
 for battery in '/sys/class/power_supply/BAT'?*
 do
 	capacity=$(cat "$battery/capacity")
-	case "$capacity" in
-		10) dunstify -u critical -h string:x-dunst-stack-tag:battery Battery 10% ;;
-		5) dunstify -u critical -h string:x-dunst-stack-tag:battery Battery 5% ;;
-	esac
 
 	status=$(cat "$battery/status")
 	case "$status" in
 		'Full') status='F' ;;
-		'Discharging') status='-' ;;
+		'Discharging')
+			status='-'
+			if [[ $capacity -lt 5 ]]
+			then
+				dunstify -u critical -h string:x-dunst-stack-tag:battery 'Battery' '<5%'
+			elif [[ $capacity -lt 10 ]]
+			then
+				dunstify -u critical -h string:x-dunst-stack-tag:battery 'Battery' '<10%'
+			fi ;;
 		'Charging') status='+' ;;
 		'Not charging') status='0' ;;
 		'Unknown') status='?' ;;

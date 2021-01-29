@@ -21,17 +21,17 @@
 
 	word_wrap = yes
 
-	dmenu = /usr/bin/dmenu -p dunst
+#	dmenu = /usr/bin/dmenu -p dunst
 
 [urgency_low]
 	background = "#272822"
 	foreground = "#f1ebeb"
-	timeout = 10
+	timeout = 20
 
 [urgency_normal]
 	background = "#272822"
 	foreground = "#f1ebeb"
-	timeout = 10
+	timeout = 20
 
 [urgency_critical]
 	background = "#272822"

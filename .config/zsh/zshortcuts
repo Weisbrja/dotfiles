@@ -22,3 +22,5 @@ lfcd () {
 	clear
 }
 bindkey -s '^o' 'lfcd\n'
+
+bindkey -s '^e' 'bc -q\n'

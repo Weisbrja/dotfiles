@@ -1,0 +1,78 @@
+\documentclass[ngerman,a4paper,10pt]{article}
+%\usepackage[utf8]{inputenc} % not needed for utf8 based engines
+%\usepackage[T1]{fontenc} % do not use for utf8 based engines
+\usepackage{babel}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm,headsep=1.125cm]{geometry}
+
+% system fonts
+%\usepackage{fontspec}
+%\defaultfontfeatures{Ligatures=TeX}
+
+% common packages
+\usepackage{amsmath,amssymb,amsthm,float}
+
+% graphics
+\usepackage{graphicx,svg}
+
+% tables
+\usepackage{array,tabulary,colortbl,booktabs}
+\renewcommand\arraystretch{1.3} % more space between rows
+
+% color
+\usepackage{xcolor}
+\colorlet{backgroundcolor}{gray!10}
+
+% code
+%\usepackage{minted}
+%\usemintedstyle{pastie}
+%\setminted{
+%	fontsize=\small,
+%	tabsize=4,
+%	breaklines,
+%	breakbefore=.,
+%	linenos,
+%	numberblanklines=false,
+%	bgcolor=backgroundcolor,
+%	frame=none
+%}
+%\newminted{java}{firstnumber=last}
+%\newmintinline{java}{bgcolor=}
+
+% useful commands
+\usepackage{csquotes} % enquote command
+\usepackage{faktor} % faktor command
+
+% links
+\usepackage[colorlinks,allcolors=blue]{hyperref} % last package to be loaded
+\usepackage{caption}
+\newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
+\renewcommand{\url}[1]{\hrefurl{#1}{#1}}
+
+% sections
+\usepackage{titlesec}
+\titlespacing*{\section}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+\titlespacing*{\subsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+\titlespacing*{\subsubsection}{0cm}{0.7\baselineskip}{0.7\baselineskip}
+\makeatletter
+\renewcommand\thesubsection{\@arabic\c@subsection)}
+\renewcommand\thesubsubsection{\@alph\c@subsubsection)}
+\makeatother
+
+% title command
+\newcommand\Title{Titel}
+
+% header
+\usepackage{lastpage,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{Jannis Weisbrodt}}
+\fancyhead[C]{\textbf{\Title}}
+\fancyhead[R]{\textbf{Seite \thepage{} von~\pageref{LastPage}}}
+\setlength\footskip{0pt}
+\renewcommand\headrulewidth{0.5pt}
+
+\begin{document}
+
+Inhalt
+
+\end{document}

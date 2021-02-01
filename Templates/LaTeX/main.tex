@@ -11,18 +11,30 @@
 % common packages
 \usepackage{amsmath,amssymb,amsthm,float}
 
+% colors
+\usepackage{xcolor}
+
+% include standalone files
+\usepackage{standalone}
+
 % graphics
 \usepackage{graphicx,svg}
+\usepackage{tikz,tikzscale}
 
 % tables
 \usepackage{array,tabulary,colortbl,booktabs}
 \renewcommand\arraystretch{1.3} % more space between rows
 
-% color
-\usepackage{xcolor}
-\colorlet{backgroundcolor}{gray!10}
+% plots
+\usepackage{pgfplots}
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{calc}
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=externalized/]
 
 % code
+%\colorlet{backgroundcolor}{gray!10}
 %\usepackage{minted}
 %\usemintedstyle{pastie}
 %\setminted{

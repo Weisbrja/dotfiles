@@ -2,7 +2,6 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin('~/.config/nvim/bundle')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'crusoexia/vim-monokai'
-Plugin 'dense-analysis/ale'
 Plugin 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ap/vim-css-color'

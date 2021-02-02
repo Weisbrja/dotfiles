@@ -55,9 +55,11 @@ set window-title-home-tilde true
 
 set statusbar-home-tilde true
 
+set selection-notification false
+
 set render-loading false
 
-set incremental-search
+set incremental-search true
 
 set selection-clipboard clipboard
 

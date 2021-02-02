@@ -2,7 +2,7 @@
 
 filename=$(dmenu -l 0 -p 'Filename' <&-)
 
-screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | head -n 1)
+screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | dmenu -p 'Resolution')
 
 ffmpeg -loglevel error \
 	-f pulse -i default \

@@ -4,7 +4,7 @@ filename=$(dmenu -l 0 -p 'Filename' <&-)
 
 audio_monitor=$(pactl list sources short | grep 'monitor' | awk '{ print $2 }' | dmenu -p 'Audio monitor')
 
-screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | head -n 1)
+screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | dmenu -p 'Resolution')
 
 ffmpeg -loglevel error \
 	-f pulse -i "$audio_monitor" \

@@ -2,7 +2,7 @@
 
 filename=$(dmenu -l 0 -p 'Filename' <&-)
 
-screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }')
+screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | head -n 1)
 
 ffmpeg -loglevel error \
 	-f x11grab -r 30 -s "$screen_resolution" -i :0.0 -vcodec libx264 \

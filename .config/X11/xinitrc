@@ -33,7 +33,7 @@ dunst &
 blueman-applet &
 
 # enable automatic locking
-xautolock -time 5 -locker slock &
+xautolock -time 30 -locker slock &
 
 # remove the mouse when idle
 unclutter &

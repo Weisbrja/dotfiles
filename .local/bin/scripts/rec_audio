@@ -1,0 +1,8 @@
+#!/bin/sh
+
+filename=$(dmenu -l 0 -p 'Filename' <&-)
+
+ffmpeg -loglevel error \
+	-f pulse -i default \
+	-c:a flac \
+	"$filename"

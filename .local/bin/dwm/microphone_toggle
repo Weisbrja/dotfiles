@@ -1,5 +1,6 @@
 #!/bin/sh
 
 amixer set Capture toggle
+amixer -c 1 set Mic toggle
 
 kill -36 $(pidof dwmblocks)

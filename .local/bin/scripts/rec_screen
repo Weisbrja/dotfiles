@@ -6,6 +6,6 @@ screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | dmenu 
 
 ffmpeg -loglevel error \
 	-f x11grab -s "$screen_resolution" -i :0.0 \
-	-c:v h264 -crf 0 -preset ultrafast \
+	-c:v libx264 -crf 0 -preset ultrafast -pix_fmt yuv420p \
 	-r 30 \
 	"$filename"

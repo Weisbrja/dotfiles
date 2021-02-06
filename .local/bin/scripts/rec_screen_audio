@@ -1,13 +1,17 @@
 #!/bin/sh
 
-filename=$(dmenu -l 0 -p 'Filename' <&-)
+if [[ -z $1 ]]
+then
+	filename=$(dmenu -l 0 -p 'Filename' <&-)
+else
+	filename="$1"
+fi
 
 screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | dmenu -p 'Resolution')
 
 ffmpeg -loglevel error \
-	-f pulse -i default \
-	-f x11grab -s "$screen_resolution" -i :0.0 \
-	-c:v libx264 -crf 0 -preset ultrafast -pix_fmt yuv420p \
+	-f pulse -ac 2 -i default \
+	-f x11grab -s "$screen_resolution" -framerate 30 -i :0.0 \
+	-c:v libx264rgb -preset fast -pix_fmt yuv420p \
 	-c:a aac \
-	-r 30 \
 	"$filename"

@@ -10,7 +10,6 @@ fi
 audio_monitor=$(pactl list sources short | grep 'monitor' | awk '{ print $2 }' | dmenu -p 'Audio monitor')
 
 ffmpeg -loglevel error \
-	-f pulse -i "$audio_monitor" \
+	-f pulse -ac 2 -i "$audio_monitor" \
 	-c:a aac \
-	-r 30 \
 	"$filename"

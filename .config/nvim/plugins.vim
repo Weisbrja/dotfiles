@@ -6,7 +6,7 @@ call vundle#begin('~/.config/nvim/bundle')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'dense-analysis/ale'
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'ervandew/supertab'

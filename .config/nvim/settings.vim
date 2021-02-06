@@ -1,12 +1,27 @@
 " line numbers
 set number
+set relativenumber
 
 " mouse support
 set mouse=a
 
+" set completion menu height
 set pumheight=10
 
+" disable showing current mode
+set noshowmode
+
+" disable introductory message
+set shortmess=I
+
+" hide buffers
 set hidden
+
+" command line completion menu
+set wildmenu
+
+" disable wrapping a line in the middle of a word
+set linebreak
 
 " spell checking
 set spell
@@ -20,27 +35,26 @@ set splitright
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 
 " indentation
 set tabstop=4
 set shiftwidth=4
 set smarttab
+set autoindent
 set smartindent
 
-" disable automatic continuation of comments
-autocmd FileType * set formatoptions-=cro
+" better comment continuation
+setlocal formatoptions-=o
 
-set conceallevel=0
-
-set updatetime=300
-set timeoutlen=500
+set backspace=indent,eol,start
 
 " global copy and paste buffer
 set clipboard=unnamedplus
 
 " leader key
-nnoremap <Space> <Nop>
-let mapleader="\<Space>"
+nnoremap <space> <nop>
+let mapleader="\<space>"
 
 " force write
 cmap w!! w !sudo tee %

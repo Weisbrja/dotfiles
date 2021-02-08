@@ -1,6 +1,12 @@
 #!/bin/sh
 
-amixer set Capture toggle
-amixer -c 1 set Mic toggle
+if amixer get Capture | grep -Fq '[on]'
+then
+	amixer set Capture nocap
+	amixer -c 1 set Mic nocap
+else
+	amixer set Capture cap
+	amixer -c 1 set Mic cap
+fi
 
 kill -36 $(pidof dwmblocks)

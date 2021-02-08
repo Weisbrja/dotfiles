@@ -9,7 +9,7 @@ fi
 
 screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | dmenu -p 'Resolution')
 
-ffmpeg -loglevel error \
+ffmpeg \
 	-f pulse -ac 2 -i default \
 	-f x11grab -s "$screen_resolution" -framerate 30 -i :0.0 \
 	-c:v libx264 -preset superfast -pix_fmt yuv420p \

@@ -11,7 +11,7 @@ audio_monitor=$(pactl list sources short | grep 'monitor' | awk '{ print $2 }' |
 
 screen_resolution=$(xrandr -q --current | grep '*' | awk '{ print $1 }' | dmenu -p 'Resolution')
 
-ffmpeg -loglevel error \
+ffmpeg \
 	-f pulse -ac 2 -i default \
 	-f pulse -ac 2 -i "$audio_monitor" \
 	-filter_complex amerge=inputs=2 \

@@ -7,7 +7,7 @@ else
 	filename="$1"
 fi
 
-ffmpeg -loglevel error \
+ffmpeg \
 	-f pulse -ac 2 -i default \
 	-c:a aac \
 	"$filename"

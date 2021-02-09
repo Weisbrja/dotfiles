@@ -9,7 +9,7 @@ fi
 
 audio_monitor=$(pactl list sources short | grep 'monitor' | awk '{ print $2 }' | dmenu -p 'Audio monitor')
 
-ffmpeg -loglevel error \
+ffmpeg \
 	-f pulse -ac 2 -i default \
 	-f pulse -ac 2 -i "$audio_monitor" \
 	-filter_complex amerge=inputs=2 \

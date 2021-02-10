@@ -44,9 +44,6 @@ set smarttab
 set smartindent
 set autoindent
 
-" better comment continuation
-setlocal formatoptions-=o
-
 set backspace=indent,eol,start
 
 " global copy and paste buffer

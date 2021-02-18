@@ -50,7 +50,6 @@ set page-padding 0
 
 set n-completion-items 20
 
-
 set show-hidden true
 
 set window-title-basename true

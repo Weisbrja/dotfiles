@@ -1,8 +1,10 @@
 #!/bin/zsh
 
 # history settings
-setopt HIST_REDUCE_BLANKS
-setopt SHARE_HISTORY
+setopt hist_expire_dups_first
+setopt hist_reduce_blanks
+setopt share_history
+setopt hist_verify
 
 # aliases
 [[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zaliases"

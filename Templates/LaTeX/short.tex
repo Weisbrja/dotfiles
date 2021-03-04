@@ -68,14 +68,18 @@
 \renewcommand\thesubsubsection{\@alph\c@subsubsection)}
 \makeatother
 
-% title command
+% title and author
 \newcommand\Title{Titel}
+\newcommand\Author{Jannis Weisbrodt}
+
+\title{\textbf{\Title}}
+\author{\Author}
 
 % header
 \usepackage{lastpage,fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\textbf{Jannis Weisbrodt}}
+\fancyhead[L]{\textbf{\Author}}
 \fancyhead[C]{\textbf{\Title}}
 \fancyhead[R]{\textbf{Seite \thepage{} von~\pageref{LastPage}}}
 \setlength\footskip{0pt}

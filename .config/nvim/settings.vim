@@ -24,7 +24,6 @@ set wildmenu
 set linebreak
 
 " spell checking
-set spell
 set spelllang=en,de
 
 " correct splits

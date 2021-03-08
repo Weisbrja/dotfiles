@@ -24,5 +24,6 @@ alias img='sxiv'
 alias upd='paru -Syyu --devel --noconfirm; paru -c --noconfirm; paru -Sc --noconfirm'
 alias updm='sudo reflector --country Germany --latest 100 --sort rate --save /etc/pacman.d/mirrorlist --verbose; upd'
 
-alias newmain="cp $HOME/Templates/LaTeX/main.tex ."
-alias newshort="cp $HOME/Templates/LaTeX/short.tex ."
+alias newmain="cp $HOME/Templates/LaTeX/Document/main.tex ."
+alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex ."
+alias newpres="cp $HOME/Templates/LaTeX/Presentation/* ."

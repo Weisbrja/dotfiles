@@ -1,0 +1,15 @@
+\newif\ifbeamer@shownav
+\beamer@shownavfalse
+\DeclareOptionBeamer{shownav}{\beamer@shownavtrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\usecolortheme{monokaimuted}
+\usefonttheme{monokai}
+
+\ifbeamer@shownav\else
+\setbeamertemplate{navigation symbols}{}
+\fi
+
+\mode<all>

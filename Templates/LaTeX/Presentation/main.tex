@@ -1,0 +1,71 @@
+\documentclass[ngerman]{beamer}
+%\usepackage[utf8]{inputenc} % not needed for utf8 based engines
+%\usepackage[T1]{fontenc} % do not use for utf8 based engines
+\usepackage{babel}
+
+% system fonts
+%\usepackage{fontspec}
+%\defaultfontfeatures{Ligatures=TeX}
+
+% common packages
+\usepackage{amsmath,amssymb,amsthm,float}
+
+% colors
+\usepackage{xcolor}
+
+% include standalone files
+\usepackage{standalone}
+
+% graphics
+\usepackage{graphicx,svg}
+\usepackage{tikz,tikzscale}
+
+% tables
+\usepackage{array,tabulary,colortbl,booktabs}
+\renewcommand\arraystretch{1.3} % more space between rows
+
+% plots
+\usepackage{pgfplots}
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{calc}
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=externalized/]
+
+% code
+%\colorlet{backgroundcolor}{gray!10}
+%\usepackage{minted}
+%\usemintedstyle{pastie}
+%\setminted{
+%	fontsize=\small,
+%	tabsize=4,
+%	breaklines,
+%	breakbefore=.,
+%	linenos,
+%	numberblanklines=false,
+%	bgcolor=backgroundcolor,
+%}
+%\newminted{java}{firstnumber=last}
+%\newmintinline{java}{bgcolor=}
+
+% useful commands
+\usepackage{csquotes} % enquote command
+
+% links
+\hypersetup{colorlinks,allcolors=lightblue}
+\usepackage{caption}
+\newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
+\renewcommand{\url}[1]{\hrefurl{#1}{#1}}
+
+% title and author
+\newcommand\Title{Titel}
+\newcommand\Author{Jannis Weisbrodt}
+
+\title{\textbf{\Title}}
+\author{\Author}
+
+\begin{document}
+
+Inhalt
+
+\end{document}

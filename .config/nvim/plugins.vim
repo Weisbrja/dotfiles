@@ -2,35 +2,35 @@
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 
 call vundle#begin('~/.config/nvim/bundle')
-
 Plugin 'VundleVim/Vundle.vim'
 
+" language support
 Plugin 'sheerun/vim-polyglot'
+
+" linting
 Plugin 'dense-analysis/ale'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'jackguo380/vim-lsp-cxx-highlight'
 
-Plugin 'ervandew/supertab'
+" completion
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
+" latex
 Plugin 'lervag/vimtex'
+Plugin 'KeitaNakamura/tex-conceal.vim'
 
+" coloring colors
 Plugin 'ap/vim-css-color'
 
+" theme
 Plugin 'crusoexia/vim-monokai'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
-" vimtex
+" plugin settings
+let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
-
-" theme
-colorscheme monokai
-set termguicolors
-set background=dark
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
-
-" airline
-let g:airline_theme = 'minimalist'
-let g:airline#extensions#tabline#enabled = 1
+let g:tex_conceal = 'abdmg'
+let g:tex_conceal_frac=1
+autocmd BufNewFile,BufRead * highlight clear Conceal

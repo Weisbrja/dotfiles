@@ -1,30 +1,24 @@
-" line numbers
-set number
-set relativenumber
-
 " mouse support
 set mouse=a
 
 " set completion menu height
 set pumheight=10
 
-" disable showing current mode
-set noshowmode
-
-" disable introductory message
-set shortmess=I
-
 " hide buffers
 set hidden
-
-" command line completion menu
-set wildmenu
 
 " disable wrapping a line in the middle of a word
 set linebreak
 
 " spell checking
+set nospell
 set spelllang=en,de
+
+" enable concealing
+set conceallevel=2
+
+" read files when they changed
+set autoread
 
 " correct splits
 set splitbelow
@@ -43,14 +37,11 @@ set smarttab
 set smartindent
 set autoindent
 
+" better backspace
 set backspace=indent,eol,start
 
 " global copy and paste buffer
 set clipboard=unnamedplus
-
-" leader key
-nnoremap <space> <nop>
-let mapleader="\<space>"
 
 " force write
 cmap w!! w !sudo tee %

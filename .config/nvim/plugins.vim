@@ -1,38 +1,38 @@
 " plugins
-set runtimepath+=~/.config/nvim/bundle/Vundle.vim
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-call vundle#begin('~/.config/nvim/bundle')
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.config/nvim/autoload')
 
 " language support
-Plugin 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " linting
-Plugin 'dense-analysis/ale'
-Plugin 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'dense-analysis/ale'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
-" completion
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+" completion and snippets
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " vimtex
-Plugin 'lervag/vimtex'
-let g:tex_flavor = 'latex'
-let g:vimtex_view_method = 'zathura'
+Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
 
 " coloring colors
-Plugin 'ap/vim-css-color'
-
-" git
-Plugin 'airblade/vim-gitgutter'
+Plug 'ap/vim-css-color'
 
 " theme
-Plugin 'crusoexia/vim-monokai'
-Plugin 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
+Plug 'morhetz/gruvbox'
 
 " airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 
-call vundle#end()
+call plug#end()

@@ -1,11 +1,11 @@
 " leader key
 nnoremap <space> <nop>
-let g:mapleader = "\<space>"
+let g:mapleader="\<space>"
 
 " toggle spell checking
 map <leader>s :setlocal spell! spelllang=en_us,de_20<cr>
 
-" disable the highlighting of search results
+" disable highlighting search results
 nnoremap // :nohlsearch<cr>
 
 " better tabbing

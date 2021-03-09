@@ -1,44 +1,47 @@
 #!/bin/sh
 
-# start the scripts in xinitrc.d
+# execute scripts in xinitrc.d
 if [ -d '/etc/X11/xinit/xinitrc.d' ]
 then
 	for f in '/etc/X11/xinit/xinitrc.d/'?*'.sh'
 	do
-		[ -x "$f" ] && . "$f"
+		[[ -x $f ]] && . "$f"
 	done
 	unset f
 fi
 
-# start the session
+# session polkit
 lxpolkit &
 
-# start the compositor
+# x resources
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources &
+
+# compositor
 picom &
 
-# set the wallpaper
+# wallpaper
 #xwallpaper --zoom "$HOME/.config/wallpaper.jpg" &
 hsetroot -solid '#000000' &
 
-# start redshift
+# blue light filter
 redshift -O 3500
 
-# start dwmblocks
+# status bar
 dwmblocks &
 
-# start dunst for notifications
+# notifications
 dunst &
 
-# bluetooth applet
+# bluetooth
 blueman-applet &
 
-# enable automatic locking
+# automatic screen locking
 xautolock -time 30 -locker slock &
 
-# remove the mouse when idle
+# remove mouse when idle
 unclutter &
 
-# set character repetition rate
+# character repetition rate
 xset r rate 300 50 &
 
 # start dwm

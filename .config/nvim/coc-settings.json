@@ -1,4 +1,7 @@
 {
 	"clangd.semanticHighlighting": true,
-	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+	"snippets.loadFromExtensions": false,
+	"snippets.snipmate.enable": false,
+	"snippets.textmateSnippetsRoots": []
 }

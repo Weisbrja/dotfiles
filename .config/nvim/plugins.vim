@@ -1,5 +1,5 @@
 " plugins
-set rtp+=~/.config/nvim/bundle/Vundle.vim
+set runtimepath+=~/.config/nvim/bundle/Vundle.vim
 
 call vundle#begin('~/.config/nvim/bundle')
 Plugin 'VundleVim/Vundle.vim'
@@ -32,5 +32,4 @@ call vundle#end()
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:tex_conceal = 'abdmg'
-let g:tex_conceal_frac=1
 autocmd BufNewFile,BufRead * highlight clear Conceal

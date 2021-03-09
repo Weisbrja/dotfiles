@@ -42,10 +42,10 @@ function! s:show_documentation()
 	endif
 endfunction
 
-" completion
+" completion with snippets
 inoremap <silent><expr> <tab>
-			\ pumvisible() ? coc#_select_confirm() :
 			\ coc#expandableOrJumpable() ? "\<c-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<cr>" :
+			\ pumvisible() ? coc#_select_confirm() :
 			\ <sid>check_back_space() ? "\<tab>" :
 			\ coc#refresh()
 
@@ -57,3 +57,4 @@ endfunction
 " snippets
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<s-tab>'
+xmap <tab> <Plug>(coc-snippets-select)

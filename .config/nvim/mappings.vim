@@ -1,12 +1,12 @@
 " leader key
 nnoremap <space> <nop>
-let g:mapleader="\<space>"
+let g:mapleader = "\<space>"
 
-" resize windows
-nnoremap <m-d> :vertical resize -2<cr>
-nnoremap <m-j> :resize +2<cr>
-nnoremap <m-k> :resize -2<cr>
-nnoremap <m-l> :vertical resize +2<cr>
+" move between splits
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " disable the highlighting of search results
 nnoremap // :nohlsearch<cr>
@@ -23,12 +23,6 @@ function! ExecuteMacroOverVisualRange()
 	execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
-" go to definition
-nmap <silent> gd <plug>(coc-definition)
-
-" rename symbol
-nmap <leader>r <plug>(coc-rename)
-
 " show documentation
 nnoremap <silent> K :call <sid>show_documentation()<cr>
 
@@ -42,19 +36,8 @@ function! s:show_documentation()
 	endif
 endfunction
 
-" completion with snippets
-inoremap <silent><expr> <tab>
-			\ coc#expandableOrJumpable() ? "\<c-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<cr>" :
-			\ pumvisible() ? coc#_select_confirm() :
-			\ <sid>check_back_space() ? "\<tab>" :
-			\ coc#refresh()
+" go to definition
+nmap <silent> gd <plug>(coc-definition)
 
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" snippets
-let g:coc_snippet_next = '<tab>'
-let g:coc_snippet_prev = '<s-tab>'
-xmap <tab> <Plug>(coc-snippets-select)
+" rename symbol
+nmap <leader>r <plug>(coc-rename)

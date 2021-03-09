@@ -11,11 +11,8 @@ set hidden
 set linebreak
 
 " spell checking
-set nospell
 set spelllang=en,de
-
-" enable concealing
-set conceallevel=2
+set nospell
 
 " read files when they changed
 set autoread

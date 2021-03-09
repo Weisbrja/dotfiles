@@ -16,7 +16,6 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 " latex
 Plugin 'lervag/vimtex'
-Plugin 'KeitaNakamura/tex-conceal.vim'
 
 " coloring colors
 Plugin 'ap/vim-css-color'
@@ -31,5 +30,3 @@ call vundle#end()
 " plugin settings
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
-let g:tex_conceal = 'abdmg'
-autocmd BufNewFile,BufRead * highlight clear Conceal

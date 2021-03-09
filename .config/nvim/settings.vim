@@ -1,6 +1,3 @@
-" spell checking
-set spelllang=en_us,de_20
-
 " global copy and paste buffer
 set clipboard=unnamedplus
 

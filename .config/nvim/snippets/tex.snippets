@@ -1,5 +1,5 @@
 # math
-priority 0
+priority 100
 
 snippet im "" w
 $${1:${VISUAL}}$$0
@@ -9,10 +9,6 @@ snippet dm "" w
 \\[
 	${1:${VISUAL}}
 \\]$0
-endsnippet
-
-snippet * "" i
-\\cdot $0
 endsnippet
 
 snippet sum "" i
@@ -31,7 +27,17 @@ snippet lra
 \\langle ${1:${VISUAL}} \\rangle$0
 endsnippet
 
+
+priority 0
+
+snippet * "" i
+\\cdot$0
+endsnippet
+
+
 # subscripts
+priority 200
+
 snippet '([A-Za-z])(\d)' "" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
@@ -40,10 +46,9 @@ snippet '([A-Za-z])_(\d\d)' "" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
+
 # superscripts
-snippet pow "" i
-^{$1}$0
-endsnippet
+priority 200
 
 snippet sq "" i
 ^2
@@ -53,31 +58,25 @@ snippet cu "" i
 ^3
 endsnippet
 
+
 # fractions
+priority 100
+
 snippet // "" i
 \\frac{${1:${VISUAL}}}{$2}$0
 endsnippet
+
+
+priority 200
 
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 
-snippet '^.*\)//' "" wrA
-`!p
-stripped = match.string[:-1]
-depth = 0
-i = len(stripped) - 1
-while True:
-	if stripped[i] == ')': depth += 1
-	if stripped[i] == '(': depth -= 1
-	if depth == 0: break;
-	i -= 1
-snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + '}'
-`{$1}$0
-endsnippet
 
 # environments
-priority 1
+priority 200
+
 snippet begin
 \\begin{${1:environment}}
 	${2:${VISUAL}}
@@ -140,7 +139,10 @@ snippet fig
 \\end{figure}$0
 endsnippet
 
+
 # structure
+priority 1000
+
 snippet sec
 \\section{${1:${VISUAL}}}$0
 endsnippet
@@ -173,7 +175,10 @@ snippet spar
 \\subparagraph{${1:${VISUAL}}}$0
 endsnippet
 
+
 # commands
+priority 100
+
 snippet lab
 \\label{${1:${VISUAL}}}$0
 endsnippet
@@ -214,7 +219,10 @@ snippet use
 \usepackage[$1]{$2}$0
 endsnippet
 
+
 # text styles
+priority 100
+
 snippet te "" i
 \\text{${1:${VISUAL}}}$0
 endsnippet

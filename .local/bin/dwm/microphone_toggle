@@ -8,5 +8,4 @@ else
 	amixer set Capture cap
 	amixer -c 1 set Mic cap
 fi
-
 kill -36 $(pidof dwmblocks)

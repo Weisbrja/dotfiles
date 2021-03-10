@@ -1,9 +1,19 @@
-dwm.normbordercolor: #282828
+dwm.normbordercolor: #000000
 dwm.normbgcolor:     #282828
 dwm.normfgcolor:     #a89984
 dwm.selbordercolor:  #689d6a
 dwm.selbgcolor:      #504945
 dwm.selfgcolor:      #ebdbb2
+
+dwm.borderpx:    2
+dwm.gappx:       8
+dwm.snap:        1
+dwm.showbar:     1
+dwm.topbar:      1
+
+dwm.nmaster:     1
+dwm.resizehints: 0
+dwm.mfact:       0.55
 
 *.color0:  #282828
 *.color8:  #928374

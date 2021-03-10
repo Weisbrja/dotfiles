@@ -13,7 +13,7 @@ fi
 # session polkit
 lxpolkit &
 
-# x resources
+# xresources
 [[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources ]] && xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources
 
 # compositor

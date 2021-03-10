@@ -14,7 +14,7 @@ fi
 lxpolkit &
 
 # x resources
-xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources &
+[[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources ]] && xrdb -merge -I${XDG_CONFIG_HOME:-$HOME/.config}/X11 ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources
 
 # compositor
 picom &

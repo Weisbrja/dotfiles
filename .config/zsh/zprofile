@@ -35,6 +35,8 @@ export SUDO_ASKPASS="$HOME/.local/bin/dmenu/dmenu_askpass"
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export AWT_TOOLKIT='MToolkit wmname LG3D'
 export _JAVA_AWT_WM_NONREPARENTING=1
+export TDESKTOP_USE_GTK_FILE_DIALOG=1
+export DESKTOP_APP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY=1
 
 # execute startx at startup
 [[ -z ${DISPLAY} && ${XDG_VTNR} -eq 1 ]] && exec startx "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xinitrc"

@@ -7,7 +7,6 @@ export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 export BROWSER='firefox'
 export EDITOR='nvim'
 export PAGER='nvim +Man!'
-export MANPAER='nvim +Man!'
 export READER='zathura'
 export TERMINAL='st'
 export SUDO_ASKPASS="$HOME/.local/bin/dmenu/dmenu_askpass"
@@ -35,6 +34,7 @@ export LESSHISTFILE='-'
 # gui variables
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export AWT_TOOLKIT='MToolkit wmname LG3D'
+export _JAVA_AWT_WM_NONREPARENTING=1
 export TDESKTOP_USE_GTK_FILE_DIALOG=1
 export DESKTOP_APP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY=1
 

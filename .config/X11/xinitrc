@@ -11,7 +11,7 @@ then
 fi
 
 # graphical authentication agent
-polkit-dumb-agent &
+lxpolkit &
 
 # xresources
 [[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources ]] && xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources

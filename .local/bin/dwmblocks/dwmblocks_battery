@@ -1,7 +1,8 @@
 #!/bin/sh
 
-printf " ^c#ebdbb2^Bat "
-# $(get_xresource foreground:)
+color=3
+
+printf ' ^c%s^Bat ' "$(get_xresource foreground:)"
 
 for battery in '/sys/class/power_supply/BAT'?*
 do
@@ -18,5 +19,5 @@ do
 		'Unknown') status='?' ;;
 	esac
 
-	printf '^c#d79921^%3s%% %s ' "$capacity" "$status"
+	printf '^c%s^%3s%% %s ' "$(get_xresource color$color:)" "$capacity" "$status"
 done

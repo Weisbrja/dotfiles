@@ -1,5 +1,7 @@
 #!/bin/sh
 
+color=5
+
 if setxkbmap -query | grep -Gq 'layout:\s*de'
 then
 	layout='De'
@@ -7,4 +9,4 @@ else
 	layout='Us'
 fi
 
-printf ' ^c#ebdbb2^Lay ^c#b16286^%s ' "$layout"
+printf ' ^c%s^Lay ^c%s^%s ' "$(get_xresource foreground:)" "$(get_xresource color$color:)" "$layout"

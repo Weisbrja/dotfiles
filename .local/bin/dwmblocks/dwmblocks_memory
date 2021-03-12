@@ -1,3 +1,5 @@
 #!/bin/sh
 
-free --mebi | awk 'NR == 2{printf(" ^c#ebdbb2^Mem ^c#83a598^%2.2f/%2.2f GiB ", ($3 / 1024), ($2 / 1024))}'
+color=4
+
+free --mebi | awk 'NR == 2 { printf(" ^c%s^Mem ^c%s^%2.2f/%2.2f GiB ", foreground, color, ($3 / 1024), ($2 / 1024)) }' foreground="$(get_xresource foreground:)" color="$(get_xresource color$color:)"

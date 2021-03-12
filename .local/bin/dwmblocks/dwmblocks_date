@@ -1,5 +1,7 @@
 #!/bin/sh
 
-time=$(date '+%a %d/%m/%Y %R')
+color=2
 
-printf ' ^c#ebdbb2^Dat ^c#98971a^%s ' "$time"
+date=$(date '+%a %d/%m/%Y %R')
+
+printf ' ^c%s^Dat ^c%s^%s ' "$(get_xresource foreground:)" "$(get_xresource color$color:)" "$date"

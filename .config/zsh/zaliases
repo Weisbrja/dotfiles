@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-# aliases
 alias vim='nvim'
 
 alias ls='exa --color=auto --group-directories-first'
@@ -15,15 +14,18 @@ alias fgrep='fgrep --color=auto'
 
 alias dotfiles="git --git-dir=${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/ --work-tree=$HOME"
 
-alias i='sudo make clean install; sudo make clean'
-alias c='vim config.def.h'
-
 alias pdf='zathura'
 alias img='sxiv'
 
+# updates
 alias upd='paru -Syyu --devel --noconfirm; paru -c --noconfirm; paru -Sc --noconfirm'
 alias updm='sudo reflector --country Germany --latest 100 --sort rate --save /etc/pacman.d/mirrorlist --verbose; upd'
 
+# suckless
+alias i='sudo make clean install; sudo make clean'
+alias c='vim config.def.h'
+
+# latex
 alias newmain="cp $HOME/Templates/LaTeX/Document/main.tex ."
 alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex ."
 alias newpres="cp $HOME/Templates/LaTeX/Presentation/* ."

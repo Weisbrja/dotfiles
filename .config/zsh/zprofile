@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# add scripts to the path
+# add scripts to path
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':' -)"
 
 # default programs
@@ -10,6 +10,7 @@ export PAGER='nvim +Man!'
 export MANPAER='nvim +Man!'
 export READER='zathura'
 export TERMINAL='st'
+export SUDO_ASKPASS="$HOME/.local/bin/dmenu/dmenu_askpass"
 
 # xdg variables
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -22,19 +23,18 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-# variables for home directory clean up
-export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+# home directory clean up
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export MAVEN_REPOSITORY="${XDG_DATA_HOME:-$HOME/.local/share}/m2/repository"
 export LESSHISTFILE='-'
 
-# other variables
-export SUDO_ASKPASS="$HOME/.local/bin/dmenu/dmenu_askpass"
+# gui variables
 export QT_QPA_PLATFORMTHEME='qt5ct'
 export AWT_TOOLKIT='MToolkit wmname LG3D'
-export _JAVA_AWT_WM_NONREPARENTING=1
 export TDESKTOP_USE_GTK_FILE_DIALOG=1
 export DESKTOP_APP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY=1
 

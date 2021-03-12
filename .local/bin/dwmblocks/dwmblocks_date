@@ -1,0 +1,5 @@
+#!/bin/sh
+
+time=$(date '+%a %d/%m/%Y %R')
+
+printf ' ^c#ebdbb2^Dat ^c#98971a^%s ' "$time"

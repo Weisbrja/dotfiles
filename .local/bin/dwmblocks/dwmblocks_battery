@@ -1,0 +1,22 @@
+#!/bin/sh
+
+printf " ^c#ebdbb2^Bat "
+# $(get_xresource foreground:)
+
+for battery in '/sys/class/power_supply/BAT'?*
+do
+	capacity=$(cat "$battery/capacity")
+
+	status=$(cat "$battery/status")
+	case "$status" in
+		'Full') status='F' ;;
+		'Discharging')
+			status='-'
+			[[ $capacity -lt 20 ]] && dunstify -u critical -h string:x-dunst-stack-tag:battery 'Battery' "$capacity%" ;;
+		'Charging') status='+' ;;
+		'Not charging') status='0' ;;
+		'Unknown') status='?' ;;
+	esac
+
+	printf '^c#d79921^%3s%% %s ' "$capacity" "$status"
+done

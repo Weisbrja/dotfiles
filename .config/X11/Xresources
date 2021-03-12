@@ -51,6 +51,9 @@
 *.selbgcolor:  COLOR_BACKGROUND_B
 *.selfgcolor:  COLOR_FOREGROUND
 
+/* font */
+*.font: iosevka:pixelsize=12
+
 /* dwm */
 dwm.normbordercolor: COLOR_BACKGROUND_B
 dwm.selbordercolor:  COLOR_PURPLE

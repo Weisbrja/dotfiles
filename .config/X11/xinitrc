@@ -10,8 +10,8 @@ then
 	unset f
 fi
 
-# session polkit
-lxpolkit &
+# graphical authentication agent
+polkit-dumb-agent &
 
 # xresources
 [[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources ]] && xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources

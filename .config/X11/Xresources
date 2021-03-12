@@ -45,13 +45,15 @@
 *.color14:    COLOR_CYAN_B
 *.color15:    COLOR_WHITE_B
 
+*.normbgcolor: COLOR_BACKGROUND
+*.normfgcolor: COLOR_WHITE
+
+*.selbgcolor:  COLOR_BACKGROUND_B
+*.selfgcolor:  COLOR_FOREGROUND
+
 /* dwm */
 dwm.normbordercolor: COLOR_BACKGROUND_B
-dwm.normbgcolor:     COLOR_BACKGROUND
-dwm.normfgcolor:     COLOR_WHITE
 dwm.selbordercolor:  COLOR_PURPLE
-dwm.selbgcolor:      COLOR_BACKGROUND_B
-dwm.selfgcolor:      COLOR_FOREGROUND
 
-dwm.borderpx:    2
-dwm.gappx:       8
+dwm.borderpx: 2
+dwm.gappx:    8

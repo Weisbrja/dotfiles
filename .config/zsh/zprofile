@@ -28,7 +28,6 @@ export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-export MAVEN_REPOSITORY="${XDG_DATA_HOME:-$HOME/.local/share}/m2/repository"
 export LESSHISTFILE='-'
 
 # gui variables

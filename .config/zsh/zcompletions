@@ -4,7 +4,7 @@
 setopt extendedglob glob_dots aliases correct
 
 # initialize completion
-autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
+autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-"$HOME/.cache"}/zcompdump"
 zmodload zsh/complist
 
 # case insensitive matching

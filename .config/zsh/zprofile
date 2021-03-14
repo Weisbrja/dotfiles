@@ -17,17 +17,17 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 # zsh variables
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/zhistory"
+export ZDOTDIR="${XDG_CONFIG_HOME:-"$HOME/.config"}/zsh"
+export HISTFILE="${XDG_DATA_HOME:-"$HOME/.local/share"}/zsh/zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
 # home directory clean up
-export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
-export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
-export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
-export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-"$HOME/.local/share"}/password-store"
+export GNUPGHOME="${XDG_DATA_HOME:-"$HOME/.local/share"}/gnupg"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-"$HOME/.config"}/gtk-2.0/gtkrc-2.0"
+export GOPATH="${XDG_DATA_HOME:-"$HOME/.local/share"}/go"
+export WGETRC="${XDG_CONFIG_HOME:-"$HOME/.config"}/wget/wgetrc"
 export LESSHISTFILE='-'
 
 # gui variables
@@ -38,4 +38,4 @@ export TDESKTOP_USE_GTK_FILE_DIALOG=1
 export DESKTOP_APP_I_KNOW_ABOUT_GTK_INCOMPATIBILITY=1
 
 # execute startx at startup
-[[ -z ${DISPLAY} && ${XDG_VTNR} -eq 1 ]] && exec startx "${XDG_CONFIG_HOME:-$HOME/.config}/X11/xinitrc"
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx "${XDG_CONFIG_HOME:-"$HOME/.config"}/X11/xinitrc"

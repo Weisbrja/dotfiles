@@ -1,14 +1,12 @@
 #!/bin/sh
 
-color=3
-
 printf ' ^c%s^Bat ' "$(get_xresource foreground:)"
 
 for battery in '/sys/class/power_supply/BAT'?*
 do
-	capacity=$(cat "$battery/capacity")
+	capacity="$(cat "$battery/capacity")"
 
-	status=$(cat "$battery/status")
+	status="$(cat "$battery/status")"
 	case "$status" in
 		'Full') status='F' ;;
 		'Discharging')
@@ -19,5 +17,5 @@ do
 		'Unknown') status='?' ;;
 	esac
 
-	printf '^c%s^%3s%% %s ' "$(get_xresource color$color:)" "$capacity" "$status"
+	printf '^c%s^%3s%% %s ' "$(get_xresource color3:)" "$capacity" "$status"
 done

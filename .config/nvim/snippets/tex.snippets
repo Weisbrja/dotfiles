@@ -139,6 +139,12 @@ snippet fig
 \\end{figure}
 endsnippet
 
+snippet frame
+\\begin{frame}
+	${0:${VISUAL}}
+\\end{frame}
+endsnippet
+
 
 # structure
 priority 1000
@@ -217,6 +223,18 @@ endsnippet
 
 snippet use
 \usepackage[$1]{$0}
+endsnippet
+
+snippet only
+\only<$1>{
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet uncover
+\uncover<$1>{
+	${0:${VISUAL}}
+}
 endsnippet
 
 

@@ -14,7 +14,7 @@ set shortmess=I
 set pumheight=10
 
 " theme
-let g:gruvbox_italic=1
 set termguicolors
 set background=dark
+let g:gruvbox_italic=1
 colorscheme gruvbox

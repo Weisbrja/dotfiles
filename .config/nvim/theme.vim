@@ -7,9 +7,6 @@ set signcolumn=yes
 " disable showing current mode
 set noshowmode
 
-" highlight current cursor line
-set cursorline
-
 " disable introductory message
 set shortmess=I
 

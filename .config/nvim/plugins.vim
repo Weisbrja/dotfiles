@@ -17,6 +17,9 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 " completion and snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" automatic pairs
+Plug 'jiangmiao/auto-pairs'
+
 " vimtex
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
@@ -26,7 +29,6 @@ let g:vimtex_view_method='zathura'
 Plug 'ap/vim-css-color'
 
 " theme
-Plug 'crusoexia/vim-monokai'
 Plug 'morhetz/gruvbox'
 
 " airline

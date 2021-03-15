@@ -20,12 +20,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " automatic pairs
 Plug 'jiangmiao/auto-pairs'
 
+" comment out lines
+Plug 'tpope/vim-commentary'
+
 " vimtex
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 
-" coloring colors
+" colors
+Plug 'norcalli/nvim-colorizer.lua'
+
 Plug 'ap/vim-css-color'
 
 " theme

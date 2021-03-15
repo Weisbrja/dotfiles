@@ -5,6 +5,10 @@ let g:mapleader="\<space>"
 " toggle spell checking
 map <leader>s :setlocal spell! spelllang=en_us,de_20<cr>
 
+" comment out lines
+nnoremap <space>/ :Commentary<cr>
+vnoremap <space>/ :Commentary<cr>
+
 " disable highlighting search results
 nnoremap // :nohlsearch<cr>
 

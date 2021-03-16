@@ -18,6 +18,9 @@ alias dotfiles="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --
 alias pdf='zathura'
 alias img='sxiv'
 
+# copy and paste to clipboard
+alias xclip='xclip -selection clipboard'
+
 # updates
 alias upd='paru -Syyu --devel --noconfirm; paru -c --noconfirm; paru -Sc --noconfirm'
 alias updm='sudo reflector --country Germany --latest 100 --sort rate --save /etc/pacman.d/mirrorlist --verbose; upd'

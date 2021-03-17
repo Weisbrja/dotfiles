@@ -29,6 +29,9 @@ alias updm='sudo reflector --country Germany --latest 100 --sort rate --save /et
 alias i='sudo make clean install; sudo make clean'
 alias c='vim config.def.h'
 
+# note
+alias note="cd $HOME/Notes; vim"
+
 # latex
 alias newmain="cp $HOME/Templates/LaTeX/Document/main.tex ."
 alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex ."

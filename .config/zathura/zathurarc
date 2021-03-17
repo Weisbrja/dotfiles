@@ -1,69 +1,59 @@
 # font
-set font 'Hermit 8'
+set font 'iosevka 10'
 
-# disable all gui elements
 set guioptions ''
 
 # colors
-set default-fg '#acada1'
-set default-bg '#272822'
+set notification-error-bg   "#282828"
+set notification-error-fg   "#cc241d"
+set notification-warning-bg "#282828"
+set notification-warning-fg "#d79921"
+set notification-bg         "#282828"
+set notification-fg         "#ebdbb2"
 
-set statusbar-fg '#f1ebeb'
-set statusbar-bg '#48483e'
+set completion-bg           "#3c3836"
+set completion-fg           "#ebdbb2"
+set completion-group-bg     "#282828"
+set completion-group-fg     "#b16286"
+set completion-highlight-bg "#b16286"
+set completion-highlight-fg "#ebdbb2"
 
-set inputbar-fg '#f1ebeb'
-set inputbar-bg '#272822'
+set index-bg                "#282828"
+set index-fg                "#ebdbb2"
+set index-active-bg         "#3c3836"
+set index-active-fg         "#b16286"
 
-set index-fg '#acada1'
-set index-bg '#272822'
-set index-active-fg '#f1ebeb'
-set index-active-bg '#48483e'
+set inputbar-bg             "#282828"
+set inputbar-fg             "#ebdbb2"
 
-set completion-fg '#acada1'
-set completion-bg '#272822'
-set completion-highlight-fg '#f1ebeb'
-set completion-highlight-bg '#48483e'
+set statusbar-bg            "#3c3836"
+set statusbar-fg            "#ebdbb2"
 
-set notification-fg '#f1ebeb'
-set notification-bg '#272822'
-set notification-error-fg '#dc2566'
-set notification-error-bg '#272822'
-set notification-warning-fg '#d4c96e'
-set notification-warning-bg '#272822'
+set highlight-color         "#b16286"
+set highlight-active-color  "#d3869b"
 
-set highlight-color '#9358fe'
-set highlight-active-color '#ae82ff'
+set default-bg              "#282828"
+set default-fg              "#ebdbb2"
 
-# recoloring settings
-set recolor true
-set recolor-lightcolor '#272822'
-set recolor-darkcolor '#f1ebeb'
-set recolor-keephue true
-set recolor-reverse-video true
+set render-loading          true
+set render-loading-bg       "#282828"
+set render-loading-fg       "#ebdbb2"
 
-# other settings
-set adjust-open best-fit
+set recolor-lightcolor      "#282828"
+set recolor-darkcolor       "#ebdbb2"
+set recolor                 true
+set recolor-keephue         true
+set recolor-reverse-video   true
 
-set first-page-column 1:1
-
-set page-padding 0
-
-set n-completion-items 20
-
-set show-hidden true
-
-set window-title-basename true
+# settings
+set statusbar-home-tilde    true
+set selection-clipboard     clipboard
+set window-title-basename   true
 set window-title-home-tilde true
-
-set statusbar-home-tilde true
-
-set selection-notification false
-
-set render-loading false
-
-set incremental-search true
-
-set selection-clipboard clipboard
+set page-padding            0
+set n-completion-items      20
+set show-hidden             true
+set incremental-search      true
 
 # mappings
 map H zoom out

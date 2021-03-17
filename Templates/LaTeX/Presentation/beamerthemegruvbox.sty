@@ -1,8 +1,15 @@
+\newif\ifbeamer@shownav
+\beamer@shownavfalse
+\DeclareOptionBeamer{shownav}{\beamer@shownavtrue}
+\ProcessOptionsBeamer
+
 \mode<presentation>
 
 \usecolortheme{gruvbox}
 \usefonttheme{gruvbox}
 
+\ifbeamer@shownav\else
 \setbeamertemplate{navigation symbols}{}
+\fi
 
 \mode<all>

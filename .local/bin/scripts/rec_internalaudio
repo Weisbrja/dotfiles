@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [[ -z $1 ]]
+if [ -z "$1" ]
 then
 	filename="$(dmenu -l 0 -p 'Filename' <&-)"
 else

@@ -151,6 +151,15 @@ snippet frame
 \\end{frame}
 endsnippet
 
+snippet tframe
+\\begin{frame}
+	\vfill
+	\centering
+	\textcolor{gruvboxcyan}{\textbf{\Large ${0:${VISUAL}}}}
+	\vfill
+\\end{frame}
+endsnippet
+
 
 # structure
 priority 1000
@@ -232,15 +241,11 @@ snippet use
 endsnippet
 
 snippet only
-\only<$1>{
-	${0:${VISUAL}}
-}
+\only<$1>{${0:${VISUAL}}}
 endsnippet
 
 snippet uncover
-\uncover<$1>{
-	${0:${VISUAL}}
-}
+\uncover<$1>{${0:${VISUAL}}}
 endsnippet
 
 

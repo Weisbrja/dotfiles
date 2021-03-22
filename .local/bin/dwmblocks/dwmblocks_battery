@@ -11,7 +11,7 @@ do
 		'Full') status='F' ;;
 		'Discharging')
 			status='-'
-			[[ $capacity -lt 20 ]] && dunstify -u critical -h string:x-dunst-stack-tag:battery 'Battery' "$capacity%" ;;
+			[ "$capacity" -lt 20 ] && dunstify -u critical -h string:x-dunst-stack-tag:battery 'Battery' "$capacity%" ;;
 		'Charging') status='+' ;;
 		'Not charging') status='0' ;;
 		'Unknown') status='?' ;;

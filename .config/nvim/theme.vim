@@ -1,5 +1,5 @@
 " line numbers
-set number relativenumber
+set number
 
 " sign column
 set signcolumn=yes

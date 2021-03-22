@@ -146,18 +146,27 @@ snippet fig
 endsnippet
 
 snippet frame
-\\begin{frame}
+\\begin{frame}{$1}
 	${0:${VISUAL}}
 \\end{frame}
 endsnippet
 
-snippet tframe
-\\begin{frame}
-	\vfill
-	\centering
-	\textcolor{gruvboxcyan}{\textbf{\Large ${0:${VISUAL}}}}
-	\vfill
-\\end{frame}
+snippet block
+\\begin{block}{$1}
+	${0:${VISUAL}}
+\\end{block}
+endsnippet
+
+snippet example
+\\begin{exampleblock}{$1}
+	${0:${VISUAL}}
+\\end{exampleblock}
+endsnippet
+
+snippet alert
+\\begin{alertblock}{$1}
+	${0:${VISUAL}}
+\\end{alertblock}
 endsnippet
 
 
@@ -248,7 +257,7 @@ snippet uncover "" w
 \uncover<$1>{${0:${VISUAL}}}
 endsnippet
 
-snippet pause "" w
+snippet p "" w
 \pause
 endsnippet
 
@@ -286,6 +295,10 @@ endsnippet
 
 snippet em "" i
 \\emph{${1:${VISUAL}}}$0
+endsnippet
+
+snippet al "" i
+\\alert{${1:${VISUAL}}}$0
 endsnippet
 
 snippet under "" i

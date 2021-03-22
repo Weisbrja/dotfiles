@@ -3,11 +3,17 @@
 %\usepackage[T1]{fontenc} % do not use for utf8 based engines
 \usepackage{babel}
 
-\usetheme{gruvbox}
-
 % system fonts
 %\usepackage{fontspec}
 %\defaultfontfeatures{Ligatures=TeX}
+
+% beamer theme
+\usetheme{Madrid}
+\useinnertheme{rectangles}
+\setbeamertemplate{blocks}[default]
+\setbeamertemplate{title page}[default]
+\setbeamertemplate{footline}{}
+\beamertemplatenavigationsymbolsempty
 
 % common packages
 \usepackage{amsmath,amssymb,amsthm,float}
@@ -49,17 +55,14 @@
 \usepackage{csquotes} % enquote command
 
 % links
-\hypersetup{colorlinks,allcolors=gruvboxcyan}
+\hypersetup{colorlinks,allcolors=blue}
 \usepackage{caption}
 \newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
 \renewcommand{\url}[1]{\hrefurl{#1}{#1}}
 
 % title and author
-\newcommand\Title{Titel}
-\newcommand\Author{Jannis Weisbrodt}
-
-\title{\textbf{\Title}}
-\author{\Author}
+\title{Titel}
+\author{Jannis Weisbrodt}
 
 \begin{document}
 

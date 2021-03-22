@@ -200,7 +200,7 @@ endsnippet
 # commands
 priority 100
 
-snippet lab
+snippet lab "" w
 \\label{${0:${VISUAL}}}
 endsnippet
 
@@ -208,23 +208,23 @@ snippet cap
 \\caption{${0:${VISUAL}}}
 endsnippet
 
-snippet i
+snippet i "" w
 \\item ${0:${VISUAL}}
 endsnippet
 
-snippet id
+snippet id "" w
 \\item[$1] ${0:${VISUAL}}
 endsnippet
 
-snippet en
+snippet en "" w
 \\enquote{${1:${VISUAL}}}$0
 endsnippet
 
-snippet url
+snippet url "" w
 \\url{${0:${VISUAL}}}
 endsnippet
 
-snippet href
+snippet href "" w
 \\href{${1:${VISUAL}}}{$0}
 endsnippet
 
@@ -240,12 +240,16 @@ snippet use
 \usepackage[$1]{$0}
 endsnippet
 
-snippet only
+snippet only "" w
 \only<$1>{${0:${VISUAL}}}
 endsnippet
 
-snippet uncover
+snippet uncover "" w
 \uncover<$1>{${0:${VISUAL}}}
+endsnippet
+
+snippet pause "" w
+\pause
 endsnippet
 
 

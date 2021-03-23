@@ -24,26 +24,26 @@
 #define COLOR_WHITE_B      #ebdbb2
 
 /* colors */
-*.foreground: COLOR_FOREGROUND
-*.background: COLOR_BACKGROUND
+*.foreground:  COLOR_FOREGROUND
+*.background:  COLOR_BACKGROUND
 
-*.color0:     COLOR_BLACK
-*.color1:     COLOR_RED
-*.color2:     COLOR_GREEN
-*.color3:     COLOR_YELLOW
-*.color4:     COLOR_BLUE
-*.color5:     COLOR_PURPLE
-*.color6:     COLOR_CYAN
-*.color7:     COLOR_WHITE
+*.color0:      COLOR_BLACK
+*.color1:      COLOR_RED
+*.color2:      COLOR_GREEN
+*.color3:      COLOR_YELLOW
+*.color4:      COLOR_BLUE
+*.color5:      COLOR_PURPLE
+*.color6:      COLOR_CYAN
+*.color7:      COLOR_WHITE
 
-*.color8:     COLOR_BLACK_B
-*.color9:     COLOR_RED_B
-*.color10:    COLOR_GREEN_B
-*.color11:    COLOR_YELLOW_B
-*.color12:    COLOR_BLUE_B
-*.color13:    COLOR_PURPLE_B
-*.color14:    COLOR_CYAN_B
-*.color15:    COLOR_WHITE_B
+*.color8:      COLOR_BLACK_B
+*.color9:      COLOR_RED_B
+*.color10:     COLOR_GREEN_B
+*.color11:     COLOR_YELLOW_B
+*.color12:     COLOR_BLUE_B
+*.color13:     COLOR_PURPLE_B
+*.color14:     COLOR_CYAN_B
+*.color15:     COLOR_WHITE_B
 
 *.normbgcolor: COLOR_BACKGROUND
 *.normfgcolor: COLOR_WHITE

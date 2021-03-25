@@ -32,9 +32,6 @@ dwmblocks &
 # notifications
 dunst &
 
-# bluetooth
-blueman-applet &
-
 # automatic screen locking
 xautolock -time 10 -locker slock &
 

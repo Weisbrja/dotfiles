@@ -36,3 +36,6 @@ alias note="cd $HOME/Notes; vim"
 alias newmain="cp $HOME/Templates/LaTeX/Document/main.tex ."
 alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex ."
 alias newpres="cp $HOME/Templates/LaTeX/Presentation/* ."
+
+# screenshot
+alias s='scrot -s --freeze'

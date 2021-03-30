@@ -1,6 +1,4 @@
 # loops
-priority 200
-
 snippet for
 for (${1:int} ${2:i} = ${3:0}; $2 < $4; ${5:++$2})
 {
@@ -17,33 +15,36 @@ endsnippet
 
 # data types
 priority 100
-
-snippet i
+snippet i "" i
 int$0
 endsnippet
 
-snippet f
+priority 100
+snippet f "" i
 float$0
 endsnippet
 
-snippet d
+priority 100
+snippet d "" i
 double$0
 endsnippet
 
-snippet u
+priority 100
+snippet u "" i
 unsigned$0
 endsnippet
 
 priority 1000
-
-snippet ui
+snippet ui "" i
 unsigned int$0
 endsnippet
 
-snippet uf
+priority 1000
+snippet uf "" i
 unsigned float$0
 endsnippet
 
-snippet ud
+priority 1000
+snippet ud "" i
 unsigned double$0
 endsnippet

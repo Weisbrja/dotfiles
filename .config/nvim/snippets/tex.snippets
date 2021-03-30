@@ -1,6 +1,4 @@
 # math
-priority 100
-
 snippet im "" w
 $${1:${VISUAL}}$$0
 endsnippet
@@ -27,17 +25,13 @@ snippet lra
 \\langle ${1:${VISUAL}} \\rangle$0
 endsnippet
 
-
 priority 0
-
 snippet * "" i
 \\cdot$0
 endsnippet
 
 
 # subscripts
-priority 200
-
 snippet '([A-Za-z])(\d)' "" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
@@ -46,10 +40,7 @@ snippet '([A-Za-z])_(\d\d)' "" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
-
 # superscripts
-priority 200
-
 snippet sq "" i
 ^2
 endsnippet
@@ -61,22 +52,17 @@ endsnippet
 
 # fractions
 priority 100
-
 snippet // "" i
 \\frac{${1:${VISUAL}}}{$2}$0
 endsnippet
 
-
 priority 200
-
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)//' "" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 
 
 # environments
-priority 200
-
 snippet begin
 \\begin{${1:environment}}
 	${0:${VISUAL}}
@@ -171,8 +157,6 @@ endsnippet
 
 
 # structure
-priority 1000
-
 snippet sec
 \\section{${0:${VISUAL}}}
 endsnippet
@@ -208,12 +192,11 @@ endsnippet
 
 # commands
 priority 100
-
 snippet lab "" w
 \\label{${0:${VISUAL}}}
 endsnippet
 
-snippet cap
+snippet cap "" w
 \\caption{${0:${VISUAL}}}
 endsnippet
 
@@ -263,8 +246,6 @@ endsnippet
 
 
 # text styles
-priority 100
-
 snippet te "" i
 \\text{${1:${VISUAL}}}$0
 endsnippet

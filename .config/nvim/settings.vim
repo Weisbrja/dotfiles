@@ -16,7 +16,7 @@ set autoread
 " better splits
 set splitbelow splitright
 
-" better search
+" search settings
 set ignorecase smartcase incsearch hlsearch
 
 " better backspace

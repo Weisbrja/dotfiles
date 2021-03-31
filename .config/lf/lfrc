@@ -1,11 +1,20 @@
+# set shell
 set shell zsh
 
+# search settings
 set hidden
 set incsearch
+
+# disable preview
 set nopreview
+
+# disable prompt
 set promptfmt ''
+
+# set tab size
 set tabstop 4
 
+# mappings
 map gh
 map g top
 map D delete
@@ -21,6 +30,7 @@ map I push A<c-a>
 map i push A<a-b><a-b><a-f>
 map a push A<a-b>
 
+# commands
 cmd open ${{
 	case $(file --mime-type $f -b) in
 		text/*) $EDITOR $fx ;;

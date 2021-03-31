@@ -1,28 +1,33 @@
 [global]
-	follow = keyboard
-
-	geometry = "320x8-0"
-
-	shrink = yes
-
+	// font
 	font = iosevka 9
 
+	// size
+	geometry = "320x8-0"
+	shrink = yes
+
+	// appearance
 	padding = 4
 	horizontal_padding = 4
-
 	indicate_hidden = true
 	separator_height = 2
-
 	frame_width = 2
 	frame_color = "#b16286"
 	separator_color = frame
 
-	idle_threshold = 120
-
+	// style
 	markup = full
 	format = "<b>%s</b>\n%b"
-
 	word_wrap = yes
+
+	// follow monitor selected by keyboard
+	follow = keyboard
+
+	// do not remove notifications if idle
+	idle_threshold = 120
+
+	// sorty notifications by urgency
+	sort = yes
 
 [urgency_low]
 	background = "#282828"

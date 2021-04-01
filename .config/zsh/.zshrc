@@ -6,4 +6,6 @@
 [[ -f ${XDG_CONFIG_HOME:-"$HOME/.config"}/zsh/zaliases ]] && source "${XDG_CONFIG_HOME:-"$HOME/.config"}/zsh/zaliases"
 [[ -f ${XDG_CONFIG_HOME:-"$HOME/.config"}/zsh/zshortcuts ]] && source "${XDG_CONFIG_HOME:-"$HOME/.config"}/zsh/zshortcuts"
 
-source '/usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh' 2>/dev/null
+source '/usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh'
+# TODO: find out how to get the plugin to change the cursor modes
+source '/usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh'

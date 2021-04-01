@@ -5,9 +5,8 @@ setopt hist_expire_dups_first hist_reduce_blanks share_history hist_verify
 
 # vim mode
 bindkey -v
-export KEYTIMEOUT=1
-cursor_block='\e[1 q'
-cursor_beam='\e[5 q'
+# TODO: find out how to get the plugin to change the cursor modes and then delete this commented code
+# export KEYTIMEOUT=1
 
 # prompt variables
 autoload -Uz colors && colors

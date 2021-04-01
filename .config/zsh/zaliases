@@ -13,10 +13,11 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias dot="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --work-tree="$HOME""
-
 alias pdf='zathura'
 alias img='sxiv'
+
+# dotfiles
+alias dot="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --work-tree="$HOME""
 
 # copy and paste to clipboard
 alias xclip='xclip -selection clipboard'

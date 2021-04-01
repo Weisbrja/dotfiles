@@ -13,7 +13,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias dotfiles="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --work-tree=$HOME"
+alias dot="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --work-tree=$HOME"
 
 alias pdf='zathura'
 alias img='sxiv'

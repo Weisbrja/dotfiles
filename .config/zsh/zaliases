@@ -16,11 +16,11 @@ alias fgrep='fgrep --color=auto'
 alias pdf='zathura'
 alias img='sxiv'
 
-# dotfiles
-alias dot="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --work-tree="$HOME""
-
 # copy and paste to clipboard
 alias xclip='xclip -selection clipboard'
+
+# dotfiles
+alias dot="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --work-tree="$HOME""
 
 # updates
 alias upd='paru -Syyu --devel --noconfirm; paru -c --noconfirm; paru -Sc --noconfirm'

@@ -10,7 +10,7 @@ zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # use lf to switch directories with <c-o>
-lfcd () {
+lfcd() {
 	tmp="$(mktemp)"
 	lf -last-dir-path="$tmp" "$@"
 	if [[ -f $tmp ]]

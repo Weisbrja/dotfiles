@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # completion settings
-setopt extendedglob glob_dots aliases correct
+setopt no_beep extended_glob glob_dots aliases correct complete_in_word
 
 # initialize completion
 autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-"$HOME/.cache"}/zcompdump"

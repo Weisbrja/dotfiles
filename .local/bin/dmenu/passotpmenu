@@ -22,5 +22,5 @@ if [[ $typeit -eq 0 ]]
 then
 	pass otp -c "otp/$password" 2>/dev/null
 else
-	pass otp "otp/$password" | { IFS= read -r pass; printf '%s' "$pass"; } | xdotool type --clearmodifiers --file -
+	pass otp "otp/$password" | { IFS= read -r pass; printf "$pass"; } | xdotool type --clearmodifiers --file -
 fi

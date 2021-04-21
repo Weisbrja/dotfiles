@@ -11,6 +11,15 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
+# automatically correct spelling mistakes
+auto-correct() {
+	zle .spell-word
+	zle .$WIDGET
+}
+zle -N accept-line auto-correct
+zle -N magic-space auto-correct
+bindkey ' ' magic-space
+
 function precmd {
 	# set terminal title to current working directory
 	print -Pn '\e]0;%~\a'

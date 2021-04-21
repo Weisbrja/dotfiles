@@ -5,8 +5,8 @@ cursor_block='\e[1 q'
 cursor_beam='\e[5 q'
 function zle-keymap-select {
 	case "$KEYMAP" in
-		vicmd) echo -ne "$cursor_block" ;;
-		viins|main) echo -ne "$cursor_beam" ;;
+		vicmd) printf "$cursor_block" ;;
+		viins|main) printf "$cursor_beam" ;;
 	esac
 }
 zle -N zle-keymap-select
@@ -17,8 +17,6 @@ auto-correct() {
 	zle .$WIDGET
 }
 zle -N accept-line auto-correct
-zle -N magic-space auto-correct
-bindkey ' ' magic-space
 
 function precmd {
 	# set terminal title to current working directory
@@ -27,14 +25,14 @@ function precmd {
 
 function preexec {
 	# set terminal title to current command
-	print -Pn "\e]0;$1\a"
+	printf "\e]0;$1\a"
 
 	# reset cursor shape
-	echo -ne "$cursor_beam"
+	printf "$cursor_beam"
 }
 
 zle-line-init() {
 	# reset cursor shape
-	echo -ne "$cursor_beam"
+	printf "$cursor_beam"
 }
 zle -N zle-line-init

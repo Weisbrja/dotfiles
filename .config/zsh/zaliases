@@ -35,7 +35,7 @@ alias note="cd $HOME/Notes; vim"
 
 # latex
 alias newmain="cp $HOME/Templates/LaTeX/Document/main.tex ."
-alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex ."
+alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex main.tex"
 alias newpres="cp $HOME/Templates/LaTeX/Presentation/* ."
 
 # screenshot

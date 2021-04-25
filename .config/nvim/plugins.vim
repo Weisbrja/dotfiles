@@ -33,7 +33,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 
 " colored parentheses
-Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 
 " colors
 Plug 'norcalli/nvim-colorizer.lua'

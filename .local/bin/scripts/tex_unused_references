@@ -1,0 +1,5 @@
+#!/bin/sh
+for s in $(grep -e '\\label{.*}' main.tex | sed 's/^.*label/ref/')
+do
+	grep -q "$s" main.tex || echo "$s" | sed 's/ref{//;s/}$//'
+done

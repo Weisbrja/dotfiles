@@ -6,7 +6,7 @@ then
 	exit 1
 fi
 
-for s in $(grep '\\label{.*}' "$@" | sed 's/^.*label/ref/')
+for s in $(sed 's/%.*//' "$@" | grep '\\label{.*}' | sed 's/^.*\\label/ref/')
 do
 	grep -q "$s" main.tex || echo "$s" | sed 's/ref{//;s/}$//'
 done

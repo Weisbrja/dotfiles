@@ -54,6 +54,7 @@ set page-padding            0
 set n-completion-items      20
 set show-hidden             true
 set incremental-search      true
+set first-page-column       1:1
 
 # mappings
 map H zoom out

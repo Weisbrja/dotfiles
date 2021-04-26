@@ -3,7 +3,8 @@
 # cursor shapes for vim modes
 cursor_block='\e[1 q'
 cursor_beam='\e[5 q'
-function zle-keymap-select {
+function zle-keymap-select
+{
 	case "$KEYMAP" in
 		vicmd) printf "$cursor_block" ;;
 		viins|main) printf "$cursor_beam" ;;
@@ -11,12 +12,14 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
-function precmd {
+function precmd
+{
 	# set terminal title to current working directory
 	print -Pn '\e]0;%~\a'
 }
 
-function preexec {
+function preexec
+{
 	# set terminal title to current command
 	printf "\e]0;$1\a"
 
@@ -24,7 +27,8 @@ function preexec {
 	printf "$cursor_beam"
 }
 
-zle-line-init() {
+zle-line-init()
+{
 	# reset cursor shape
 	printf "$cursor_beam"
 }

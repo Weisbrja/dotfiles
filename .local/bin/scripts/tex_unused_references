@@ -6,9 +6,11 @@ then
 	exit 1
 fi
 
-# remove all actual percent signs (\%) and comments (starting with %), then extract all labels
+# remove all actual percent signs (\%) and comments (starting with %), before working with the text
+
+# extract all labels
 for s in $(sed 's/\\%//g;s/%.*//' "$@" | grep '\\label{.*}' | sed 's/^.*\\label{/ref{/g;s/}.*/}/')
 do
 	# output the label if it has not been ref'd
-	sed 's/%.*//' "$@" | grep -q "$s" || echo "$s" | sed 's/ref{//;s/}$//'
+	sed 's/\\%//g;s/%.*//' "$@" | grep -q "$s" || echo "$s" | sed 's/ref{//;s/}$//'
 done

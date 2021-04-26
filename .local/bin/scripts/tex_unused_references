@@ -6,7 +6,9 @@ then
 	exit 1
 fi
 
-for s in $(sed 's/%.*//' "$@" | grep '\\label{.*}' | sed 's/^.*\\label/ref/')
+# remove all actual percent signs (\%) and comments (starting with %), then extract all labels
+for s in $(sed 's/\\%//g;s/%.*//' "$@" | grep '\\label{.*}' | sed 's/^.*\\label{/ref{/g;s/}.*/}/')
 do
-	grep -q "$s" main.tex || echo "$s" | sed 's/ref{//;s/}$//'
+	# output the label if it has not been ref'd
+	sed 's/%.*//' "$@" | grep -q "$s" || echo "$s" | sed 's/ref{//;s/}$//'
 done

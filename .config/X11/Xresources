@@ -52,7 +52,7 @@
 *.selfgcolor:  COLOR_FOREGROUND
 
 /* font */
-*.font: iosevka:pixelsize=12
+*.font: iosevka:pixelsize=12:antialias=true:autohint=true
 
 /* dwm */
 dwm.normbordercolor: COLOR_BACKGROUND_B

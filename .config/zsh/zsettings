@@ -3,6 +3,9 @@
 # history settings
 setopt hist_expire_dups_first hist_reduce_blanks share_history hist_verify
 
+# enable comments
+setopt interactive_comments
+
 # vim mode
 bindkey -v
 export KEYTIMEOUT=1

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ ! "$@" ]
+if [ -z "$1" ]
 then
 	echo "Usage: tex_unused_references file1 ..."
 	exit 1

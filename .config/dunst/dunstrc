@@ -1,12 +1,12 @@
 [global]
-	// font
+	# font
 	font = iosevka 9
 
-	// size
+	# size
 	geometry = "320x8-0"
 	shrink = yes
 
-	// appearance
+	# appearance
 	padding = 4
 	horizontal_padding = 4
 	indicate_hidden = true
@@ -15,18 +15,22 @@
 	frame_color = "#b16286"
 	separator_color = frame
 
-	// style
+	# style
 	markup = full
 	format = "<b>%s</b>\n%b"
 	word_wrap = yes
 
-	// follow monitor selected by keyboard
+	# set icon size
+	min_icon_size = 24
+	max_icon_size = 24
+
+	# follow monitor selected by keyboard
 	follow = keyboard
 
-	// do not remove notifications if idle
+	# do not remove notifications if idle
 	idle_threshold = 120
 
-	// sorty notifications by urgency
+	# sorty notifications by urgency
 	sort = yes
 
 [urgency_low]

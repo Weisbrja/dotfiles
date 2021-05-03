@@ -11,13 +11,10 @@ then
 fi
 
 # graphical authentication agent
-lxpolkit &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # xresources
 [ -f "${XDG_CONFIG_HOME:-"$HOME/.config"}/X11/Xresources" ] && xrdb "${XDG_CONFIG_HOME:-$HOME/.config}/X11/Xresources"
-
-# network manager
-nm-applet &
 
 # compositor
 picom &

@@ -20,8 +20,8 @@ fi
 picom &
 
 # wallpaper
-#xwallpaper --zoom "$HOME/.config/wallpaper.jpg" &
-hsetroot -solid '#000000' &
+xwallpaper --zoom "$HOME/Pictures/Wallpapers/green.jpg" &
+#hsetroot -solid '#000000' &
 
 # blue light filter
 redshift -O 3500

@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # history settings
-setopt hist_expire_dups_first hist_reduce_blanks share_history hist_verify
+setopt hist_expire_dups_first hist_reduce_blanks
 
 # enable comments
 setopt interactive_comments

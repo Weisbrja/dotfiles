@@ -1,0 +1,2 @@
+#!/bin/sh
+gpg --export "$1" | qrencode -8 -l M -o "$1.pub.png" && gpg --export-secret-key "$1" | paperkey --output-type raw | qrencode -8 -l M -o "$1.png"

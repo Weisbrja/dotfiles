@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ -z "$1" ] || [ -z "$2" ]
+then
+	echo 'Usage: gpg_import path/to/gpg_key.pub.png path/to/gpg_key.png'
+	exit 1
+fi
+
+temp="$(mktemp)"
+zbarimg -1 -q --raw -Sbinary "$1" > "$temp" && zbarimg -1 -q --raw -Sbinary "$2" | paperkey --pubring "$temp" | gpg --import || echo 'You may have to blur a scanned QR-Code:\nconvert scanned.png -blur 0 output.png'
+rm "$temp"

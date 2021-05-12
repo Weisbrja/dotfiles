@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]
+then
+	echo 'Usage: ssh_export path/to/ssh_key.pub path/to/ssh_key path/to/ssh_key.pub.png path/to/ssh_key.png'
+	exit 1
+fi
+
+qrencode -r "$1" -l H -o "$3"
+qrencode -r "$2" -l H -o "$4"

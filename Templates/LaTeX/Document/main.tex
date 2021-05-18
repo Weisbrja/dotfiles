@@ -2,7 +2,7 @@
 %\usepackage[utf8]{inputenc} % not needed for utf8 based engines
 %\usepackage[T1]{fontenc} % do not use for utf8 based engines
 \usepackage{babel}
-\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm,headsep=1cm,nofoot,includehead]{geometry}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=2cm,headsep=1cm,noheadfoot]{geometry}
 
 % system fonts
 %\usepackage{fontspec}
@@ -12,14 +12,13 @@
 \usepackage{amsmath,amssymb,amsthm,siunitx,float}
 
 % colors
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 
 % include standalone files
 \usepackage{standalone}
 
 % graphics
-\usepackage{graphicx,svg}
-\usepackage{tikz,tikzscale}
+\usepackage{graphicx,svg,tikz,tikzscale}
 %\tikzexternalize[prefix=externalized/]
 
 % lists
@@ -56,7 +55,7 @@
 % useful commands
 \usepackage{csquotes} % enquote command
 \usepackage{chemfig} % chemfig command
-\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} % number equation
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} % number a equation
 
 % links
 \usepackage[colorlinks,allcolors=blue]{hyperref} % last package to be loaded
@@ -88,7 +87,7 @@
 \fancyhf{}
 \fancyhead[L]{\textbf{\Author}}
 \fancyhead[C]{\textbf{\Title}}
-\fancyhead[R]{\textbf{Seite \thepage{} von~\nohyper{\pageref{LastPage}}}}
+\fancyhead[R]{\textbf{Seite \thepage{} von \nohyper{\pageref{LastPage}}}}
 \renewcommand\headrulewidth{0.5pt}
 
 \begin{document}

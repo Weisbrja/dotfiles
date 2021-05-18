@@ -8,6 +8,6 @@ else
 fi
 
 ffmpeg \
-	-f pulse -ac 2 -i default \
+	-f pulse -i default \
 	-c:a aac \
 	"$filename"

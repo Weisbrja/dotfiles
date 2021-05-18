@@ -25,8 +25,7 @@
 \usepackage{standalone}
 
 % graphics
-\usepackage{graphicx,svg}
-\usepackage{tikz,tikzscale}
+\usepackage{graphicx,svg,tikz,tikzscale}
 %\tikzexternalize[prefix=externalized/]
 
 % tables
@@ -53,10 +52,11 @@
 
 % useful commands
 \usepackage{csquotes} % enquote command
-\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} % number equation
+\usepackage{chemfig} % chemfig command
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}} % number a equation
 
 % links
-\hypersetup{colorlinks,allcolors=blue}
+\hypersetup{colorlinks,allcolors=blue} % last package to be loaded
 \usepackage{caption}
 \newcommand{\hrefurl}[2]{\small\texttt{\href{#1}{#2}}}
 \renewcommand{\url}[1]{\hrefurl{#1}{#1}}

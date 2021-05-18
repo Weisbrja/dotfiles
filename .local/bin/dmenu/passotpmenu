@@ -3,7 +3,7 @@
 shopt -s nullglob globstar
 
 typeit=0
-if [[ "$1" == "--type" ]]
+if [ "$1" = '--type' ]
 then
 	typeit=1
 	shift
@@ -16,9 +16,9 @@ password_files=("${password_files[@]%.gpg}")
 
 password="$(printf '%s\n' "${password_files[@]}" | dmenu "$@")"
 
-[[ -n $password ]] || exit
+[ -n "$password" ] || exit
 
-if [[ $typeit -eq 0 ]]
+if [ "$typeit" -eq 0 ]
 then
 	pass otp -c "otp/$password" 2>/dev/null
 else

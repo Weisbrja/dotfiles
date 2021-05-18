@@ -1,7 +1,7 @@
 local g = vim.g
 local fn = vim.fn
 
--- disable some builtin plugins
+-- disable some plugins
 g.loaded_gzip = 1
 g.loaded_tar = 1
 g.loaded_tarPlugin = 1
@@ -30,7 +30,8 @@ end
 local use = require 'packer'.use
 require 'packer'.startup(function()
 	use 'wbthomason/packer.nvim'
-	use 'morhetz/gruvbox'
+	use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
+--	use 'morhetz/gruvbox'
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-compe'
 	use 'norcalli/nvim-colorizer.lua'

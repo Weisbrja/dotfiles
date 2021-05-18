@@ -1,4 +1,4 @@
-# set shell
+# shell
 set shell zsh
 
 # search settings
@@ -11,7 +11,7 @@ set nopreview
 # disable prompt
 set promptfmt ''
 
-# set tab size
+# tab size
 set tabstop 4
 
 # mappings

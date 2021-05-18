@@ -1,9 +1,0 @@
-{
-	"snippets.ultisnips.directories": ["snippets"],
-	"snippets.snipmate.enable": false,
-	"snippets.loadFromExtensions": false,
-	"snippets.extends": {
-		"cpp": ["c"]
-	},
-	"clangd.semanticHighlighting": true
-}

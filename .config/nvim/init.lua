@@ -1,0 +1,7 @@
+require 'settings'
+require 'colorscheme'
+require 'plugins'
+require 'lsp'
+require 'completions'
+require 'spelling'
+vim.cmd 'source $XDG_CONFIG_HOME/nvim/vim/autocommands.vim'

@@ -47,8 +47,8 @@ o.linebreak = true
 wo.linebreak = true
 
 -- sign column
-o.signcolumn = 'yes'
-wo.signcolumn = 'yes'
+o.signcolumn = 'number'
+wo.signcolumn = 'number'
 
 -- line numbers
 o.number = true

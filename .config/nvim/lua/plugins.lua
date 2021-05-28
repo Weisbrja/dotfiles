@@ -30,8 +30,9 @@ end
 local use = require 'packer'.use
 require 'packer'.startup(function()
 	use 'wbthomason/packer.nvim'
-	use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
---	use 'morhetz/gruvbox'
+	use 'sheerun/vim-polyglot'
+--	use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
+	use 'morhetz/gruvbox'
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-compe'
 	use 'norcalli/nvim-colorizer.lua'

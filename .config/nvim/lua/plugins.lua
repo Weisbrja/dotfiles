@@ -38,4 +38,4 @@ require 'packer'.startup(function()
 --	use 'l3mon4d3/luasnip'
 end)
 
-require 'colorizer'.setup()
+require 'colorizer'.setup {}

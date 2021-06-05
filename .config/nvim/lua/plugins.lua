@@ -20,12 +20,6 @@ g.loaded_ruby_provider = 0
 g.loaded_python_provider = 0
 --g.loaded_python3_provider = 0
 
--- automatically install packer
-local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-	fn.system {'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path}
-end
-
 -- plugins
 local use = require 'packer'.use
 require 'packer'.startup(function()

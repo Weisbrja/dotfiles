@@ -1,4 +1,5 @@
 require 'settings'
+require 'install_packer'
 require 'colorscheme'
 require 'plugins'
 require 'lsp'

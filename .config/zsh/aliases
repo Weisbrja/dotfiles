@@ -4,10 +4,10 @@ alias v='nvim'
 
 alias ls='exa --color=auto --group-directories-first'
 alias la='ls -a'
-alias ll='ls -l'
 alias l='ls -la'
-alias llt='ls -T'
+alias ll='ls -l'
 alias lt='ls -Ta'
+alias llt='ls -T'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'

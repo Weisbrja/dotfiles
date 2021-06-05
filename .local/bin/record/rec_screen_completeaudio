@@ -16,6 +16,6 @@ ffmpeg \
 	-f pulse -i default \
 	-f pulse -i "$audio_monitor" \
 	-filter_complex amerge=inputs=2 \
-	-c:v libx264 -pix_fmt yuv420p -preset ultrafast \
+	-c:v libx265 -pix_fmt yuv420p -preset ultrafast \
 	-c:a aac \
 	"$filename"

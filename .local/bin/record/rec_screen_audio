@@ -12,6 +12,6 @@ screen_resolution="$(xrandr -q --current | grep '*' | awk '{ print $1 }' | dmenu
 ffmpeg \
 	-f x11grab -s "$screen_resolution" -framerate 20 -i :0.0 \
 	-f pulse -i default \
-	-c:v libx264 -pix_fmt yuv420p -preset ultrafast \
+	-c:v libx265 -pix_fmt yuv420p -preset ultrafast \
 	-c:a aac \
 	"$filename"

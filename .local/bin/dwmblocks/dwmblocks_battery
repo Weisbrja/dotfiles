@@ -2,7 +2,7 @@
 
 printf ' ^c%s^Bat ' "$(xgetres foreground)"
 
-for battery in '/sys/class/power_supply/BAT'?*
+for battery in '/sys/class/power_supply/BAT'*
 do
 	capacity="$(cat "$battery/capacity")"
 

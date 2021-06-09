@@ -24,7 +24,7 @@ alias dot="git --git-dir=${XDG_DATA_HOME:-"$HOME/.local/share"}/dotfiles --work-
 
 # updates
 alias upd='paru -Syyu --devel --noconfirm; paru -c --noconfirm; paru -Sc --noconfirm'
-alias updm='sudo reflector --country Germany --latest 100 --sort rate --protocol https --save /etc/pacman.d/mirrorlist --verbose; upd'
+alias updm='sudo reflector --country Germany --latest 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist --verbose; upd'
 
 # suckless
 alias i='sudo make clean install; sudo make clean'

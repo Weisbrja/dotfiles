@@ -42,7 +42,7 @@ unclutter --timeout 30 &
 xset r rate 300 50 &
 
 # start dwm
-while true
+while :
 do
 	dwm >/dev/null 2>&1
 done

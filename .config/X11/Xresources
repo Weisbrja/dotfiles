@@ -59,4 +59,4 @@ dwm.normbordercolor: COLOR_BACKGROUND_B
 dwm.selbordercolor:  COLOR_PURPLE
 
 dwm.borderpx: 2
-dwm.gappx:    8
+dwm.gappx:    6

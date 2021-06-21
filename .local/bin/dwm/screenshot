@@ -1,0 +1,5 @@
+#!/bin/sh
+
+killall unclutter
+scrot -s --freeze
+unclutter --timeout 30 &

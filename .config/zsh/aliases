@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-alias v='nvim'
-
 alias ls='exa --color=auto --group-directories-first'
 alias la='ls -a'
 alias l='ls -la'
@@ -13,6 +11,9 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+alias disown='d'
+
+alias v='nvim'
 alias pdf='zathura'
 alias img='sxiv'
 

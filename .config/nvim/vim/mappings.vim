@@ -1,5 +1,5 @@
 " force write
-cnoremap W execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " disable highlighting search results
 nnoremap // :nohlsearch<cr>
